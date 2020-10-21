@@ -1,0 +1,69 @@
+h3{
+    color: #654597;
+}
+
+form{
+    background-color: #574AE2;
+    box-shadow: 2px 2px 6px 6px #AB81CD;
+    border-radius: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+form input, form label, form select{
+
+  margin-bottom: 1rem;
+
+}
+
+label{
+    color: white;
+}
+
+input{
+    transition: transform .5s ease-in-out;
+}
+
+input:focus{
+    transform: scale(1.1);
+}
+
+Button{
+  background-color: #E2ADF2 !important;
+  color: #222A68 !important;
+/*   font-family: 'Montserrat', sans-serif; */
+  transition: transform .5s ease-in-out;
+}
+
+.form-group{
+  margin-bottom: 0 !important;
+}
+
+Button:hover{
+  background-color: rgba(226, 173, 242, .6) !important;
+  color: white !important;
+  transform: scale(1.1);
+}
+
+Button:active, Button:focus{
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.total span{
+  color: white !important;
+}
+
+.modal-title{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.modal-body{
+  text-align: center !important;
+  color: #222A68 !important;
+}
+
+.modal-footer Button{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}

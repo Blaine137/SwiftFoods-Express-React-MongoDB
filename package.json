@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "nodemon server",
+    "start:prod": "nodemon server.js",
+    "build": "cd client && yarn run build"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9"
+  }
+}

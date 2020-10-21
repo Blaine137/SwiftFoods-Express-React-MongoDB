@@ -1,0 +1,39 @@
+p{
+    color: #222A68;
+    font-family: 'Montserrat', sans-serif;
+}
+
+span{
+    color: #222A68;
+}
+
+.card-title{
+    color: #574AE2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+.shopCard{
+    width: 18rem;
+}
+
+
+.orderBtn{
+    background-color: #E2ADF2 !important;
+    color: #574AE2 !important;
+    transition: transform .5s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+.orderBtn:focus{
+    box-shadow: none !important;
+}
+  
+  .orderBtn:hover{
+    background-color: #574AE2 !important;
+    color: #E2ADF2 !important;
+    transform: scale(1.1);
+  }
