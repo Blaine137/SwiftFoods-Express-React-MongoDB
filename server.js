@@ -2,9 +2,8 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const mongoose = require('mongoose');
+require('dotenv/config');
 
-
-/* mongodb+srv://blaine:skater3553@cluster0.6irvh.mongodb.net/swiftFoods?retryWrites=true&w=majority */
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
@@ -12,7 +11,7 @@ if (process.env.NODE_ENV === "production") {
 // app.use(express.static("client/build"));
 
 
-mongoose.connect('mongodb+srv://blaine:skater3553@cluster0.6irvh.mongodb.net/swiftFoods?retryWrites=true&w=majority',{ useNewUrlParser: true }, () => {
+mongoose.connect(process.env.DB_CONNECTION,{ useNewUrlParser: true }, () => {
     console.log('connected to db')
 })
 
@@ -25,7 +24,7 @@ shopRouter.route('/')
     next();
 })
 .get((req, res) => {
-    res.send('communicating')
+    console.log('communicating')
 });
 
 app.use('/shop', shopRouter)
