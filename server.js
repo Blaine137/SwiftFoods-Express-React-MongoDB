@@ -25,9 +25,13 @@ shopRouter.route('/')
     res.setHeader('Content-Type', 'text/plain');
     next();
 })
-.get((req, res) => {
-    res.send(req.body)
-    console.log(req.body)
+.get(async (req, res) => {
+    try {
+        const products = await Products.find();
+        res.json(products);
+    } catch(err){
+        res.json(err);
+    }
 });
 
 app.use('/shop', shopRouter)
