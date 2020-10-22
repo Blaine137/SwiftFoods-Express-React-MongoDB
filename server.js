@@ -28,7 +28,7 @@ shopRouter.route('/')
 .get(async (req, res) => {
     try {
         const products = await Products.find();
-        res.json(products);
+        res.json(products); //returns json
     } catch(err){
         res.json(err);
     }
