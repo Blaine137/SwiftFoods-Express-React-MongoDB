@@ -14,15 +14,22 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 class Layout extends Component{
 
     state = {
-        homePage: true,
-        aboutPage: false,
-        shopPage: false,
-        contactPage: false,
+        shoppingData: null
     };
 
+    componentDidMount(){
+        this.getData().then(res => this.setState({shoppingData: res.data}))
+    }
+
+    getData = async () => {
+        const response = await fetch('/shop');
+        const body = await response.json();
+        return body;
+        
+    }
 
     render(){
-
+        console.log(this.state.shoppingData)
         return(
 
             <Fragment>

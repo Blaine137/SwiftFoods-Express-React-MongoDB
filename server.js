@@ -29,7 +29,7 @@ shopRouter.route('/')
     try {
         const products = await Products.find();
         
-        res.json(products[0].pizza); //returns json
+        res.send({data: products[0]}); //returns json
     } catch(err){
         res.json(err);
     }
