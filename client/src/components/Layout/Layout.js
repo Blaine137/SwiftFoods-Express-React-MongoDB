@@ -14,11 +14,11 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 class Layout extends Component{
 
     state = {
-        shoppingData: null
+        Data: null
     };
 
     componentDidMount(){
-        this.getData().then(res => this.setState({shoppingData: res.data}))
+        this.getData().then(res => this.setState({Data: res.data}))
     }
 
     getData = async () => {
@@ -29,7 +29,14 @@ class Layout extends Component{
     }
 
     render(){
-        console.log(this.state.shoppingData)
+        if(this.state.Data){
+            const pizza = this.state.Data.pizza;
+            const salad = this.state.Data.salad;
+            const burger = this.state.Data.burger;
+            
+        }
+
+        
         return(
 
             <Fragment>
@@ -40,7 +47,7 @@ class Layout extends Component{
                     <Switch>
                     
                         <Route exact path="/">
-                            <Home/>
+                            <Home />
                         </Route>
 
                         <Route path="/about">
@@ -48,7 +55,7 @@ class Layout extends Component{
                         </Route>
 
                         <Route path="/shop">
-                            <Shop/>
+                            <Shop data={this.state.Data}/>
                         </Route>
 
                         <Route path="/contact">

@@ -42,6 +42,24 @@ const productSchema = mongoose.Schema({
             type: mongoose.Types.Decimal128,
             unique: true
         }
+    },
+    home: {
+        title1:{
+            type: String,
+            unique: true
+        },
+        title2:{
+            type: String,
+            unique: true
+        },
+        title3:{
+            type: String,
+            unique: true
+        },
+        title4:{
+            type: String,
+            unique: true
+        }
     }
 })
 

@@ -3,7 +3,8 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const Products = require('./models/products');
+const shopRouter = require('./routes/shopRouter');
+
 require('dotenv/config');
 
 
@@ -16,24 +17,6 @@ app.use(bodyParser.json());
 mongoose.connect(process.env.DB_CONNECTION,{ useNewUrlParser: true }, () => {
     console.log('connected to db')
 })
-
-const shopRouter = express.Router();
-
-shopRouter.route('/')
-.all((req, res, next) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    next();
-})
-.get(async (req, res) => {
-    try {
-        const products = await Products.find();
-        
-        res.send({data: products[0]}); //returns json
-    } catch(err){
-        res.json(err);
-    }
-});
 
 app.use('/shop', shopRouter)
 

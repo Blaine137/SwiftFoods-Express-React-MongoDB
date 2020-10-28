@@ -1,21 +1,21 @@
 import React, { Fragment } from 'react';
 import {
     Card, CardImg, CardText, CardBody,
-    CardTitle, Button
+    CardTitle, Button, Spinner
   } from 'reactstrap';
 import {Link} from 'react-router-dom';
 import './Shop.scss';
 
 
 const Shop = (props) => {
-
+    props.data ? console.log(props.data) : console.log('hi')
     return(
 
         <Fragment>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h3 class="text-center mt-5 mb-5">Shop!</h3>
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <h3 className="text-center mt-5 mb-5">Shop!</h3>
                     </div>
                 </div>
             </div>
@@ -25,13 +25,13 @@ const Shop = (props) => {
                         <CardImg top width="100%" src={process.env.PUBLIC_URL + '/assets/images/peppizza.jpg'} alt="pepperoni pizza" />
                         <CardBody className="text-center">
                             <CardTitle tag="h5">
-                                Pizza
+                                {props.data ? props.data.pizza.title : <Spinner color="#574AE2"/>}
                             </CardTitle>
                             <CardText className="text-left">
-                                Italian pizza made with homemade tomato sauce, fresh american white cheese, and topped with pepperonis
+                            {props.data ? props.data.pizza.description : <Spinner color="#574AE2" className="mx-auto"/>}
                             </CardText>
                             <CardText>
-                                $6.99
+                                {props.data ? props.data.pizza.price.$numberDecimal : <Spinner color="#574AE2"/>}
                             </CardText>
                             <Link to="/order">
                                 <Button className="orderBtn">
@@ -45,9 +45,15 @@ const Shop = (props) => {
                     <Card className="mx-auto shopCard mb-4">
                         <CardImg top width="100%" src={process.env.PUBLIC_URL + '/assets/images/salad.jpg'} alt="salad" />
                         <CardBody className="text-center">
-                            <CardTitle tag="h5">Salad</CardTitle>
-                            <CardText className="text-left">Freshly cut lettuce topped with home grown tomatos, garden fresh carrots, and our signature ranch dressing.</CardText>
-                            <CardText >$4.99</CardText>
+                            <CardTitle tag="h5">
+                                {props.data ? props.data.salad.title : <Spinner color="#574AE2"/>}
+                            </CardTitle>
+                            <CardText className="text-left">
+                                {props.data ? props.data.salad.description : <Spinner color="#574AE2"/>}
+                            </CardText>
+                            <CardText >
+                                {props.data ? props.data.salad.price.$numberDecimal : <Spinner color="#574AE2"/>}
+                            </CardText>
                             <Link to="/order">
                                 <Button className="orderBtn">
                                     Order Now
@@ -60,9 +66,15 @@ const Shop = (props) => {
                     <Card className="mx-auto shopCard mb-4">
                         <CardImg top width="100%" src={process.env.PUBLIC_URL + '/assets/images/burger.jpg'} alt="burger" />
                         <CardBody className="text-center">
-                            <CardTitle tag="h5">Burger</CardTitle>
-                            <CardText className="text-left">Mouth drooling angus burger on two buns topped with fresh lettuce, tomato, ketchup and onions.</CardText>
-                            <CardText >$8.99</CardText>
+                            <CardTitle tag="h5">
+                                {props.data ? props.data.burger.title : <Spinner color="#574AE2"/>}
+                            </CardTitle>
+                            <CardText className="text-left">
+                                {props.data ? props.data.burger.description : <Spinner color="#574AE2"/>}
+                            </CardText>
+                            <CardText >
+                                {props.data ? props.data.burger.price.$numberDecimal : <Spinner color="#574AE2"/>}
+                            </CardText>
                             <Link to="/order">
                                 <Button className="orderBtn">
                                     Order Now
