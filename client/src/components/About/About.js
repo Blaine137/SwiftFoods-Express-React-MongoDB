@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import {Spinner} from 'reactstrap';
 import './About.scss';
 
 const About = (props) => {
@@ -14,26 +15,38 @@ const About = (props) => {
                     <div class="container">
                         <div class="row row-content align-items-center">
                             <div class="col-6 ">
-                                <h4 class="font-weight-bold">Our Mission</h4>
+                                <h4 class="font-weight-bold">
+                                    {props.data ? props.data.about.title1 : <Spinner color="#574AE2"/> }
+                                </h4>
                             </div>
                             <div class="col text-left ">
-                                <p class="w-55 ml-auto">We strive to keep our customers fed with little to no effort. if you are not satisfied with our product, we will refund your money!</p>
+                                <p class="w-55 ml-auto">
+                                    {props.data ? props.data.about.p1 : <Spinner color="#574AE2"/> }
+                                </p>
                             </div>
                         </div>
                         <div class="row row-content align-items-center">
                             <div class="col text-left">
-                                <p class="w-55 mr-auto">Here at Swift Foods, we provide the highest quality food. Our food contains less sugar, less processes, and more nutrients that is ready in three minutes!</p>
+                                <p class="w-55 mr-auto">
+                                    {props.data ? props.data.about.p2 : <Spinner color="#574AE2"/> }
+                                </p>
                             </div>
                             <div class="col-6 text-right">
-                                <h4 class="font-weight-bold">Our Food</h4>
+                                <h4 class="font-weight-bold">
+                                    {props.data ? props.data.about.title2 : <Spinner color="#574AE2"/> }
+                                </h4>
                             </div>
                         </div>
                         <div class="row row-content align-items-center">
                             <div class="col-6">
-                                <h4 class="font-weight-bold">Why Swift Foods?</h4>
+                                <h4 class="font-weight-bold">
+                                    {props.data ? props.data.about.title3 : <Spinner color="#574AE2"/> }
+                                </h4>
                             </div>
                             <div class="col text-left">
-                                <p class=" w-55 ml-auto ">When it comes time to eat, you have many options. Foods offer convenience, nutrition, and cravings. At Swift Foods, we offer all three for a prive you cannot beat!</p>
+                                <p class=" w-55 ml-auto ">
+                                    {props.data ? props.data.about.p3 : <Spinner color="#574AE2"/> }
+                                </p>
                             </div>
                         </div>
                     </div>

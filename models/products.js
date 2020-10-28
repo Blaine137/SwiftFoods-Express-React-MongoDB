@@ -60,6 +60,33 @@ const productSchema = mongoose.Schema({
             type: String,
             unique: true
         }
+    },
+    about: {
+        title1: {
+            type: String,
+            unique: true
+        },
+        p1: {
+            type: String,
+            unique: true
+        },
+        title2: {
+            type: String,
+            unique: true
+        },
+        p2: {
+            type: String,
+            unique: true
+        },
+        title3: {
+            type: String,
+            unique: true
+        },
+        p3: {
+            type: String,
+            unique: true
+        }
+
     }
 })
 

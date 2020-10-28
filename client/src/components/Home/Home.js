@@ -26,7 +26,9 @@ const home = (props) => {
                     <Card style={ {width: "18rem"} } className="mx-auto homeCard">
                         <CardImg top width="100%" src={process.env.PUBLIC_URL + '/assets/images/chooseyourmeal.jpg'} alt="Choose your meal" className="card-img-top" style={ {height: "200px"} }/>
                         <CardBody>
-                            <h5 className="text-center">Choose your meal!</h5>
+                            <h5 className="text-center">
+                                {props.data ? props.data.home.title1 : <Spinner color="#574AE2"/>}
+                            </h5>
                         </CardBody>
                     </Card>
                 </div>
@@ -34,7 +36,9 @@ const home = (props) => {
                     <Card style={ {width: "18rem"} } className="mx-auto homeCard">
                         <CardImg top width="100%" src={process.env.PUBLIC_URL + '/assets/images/wedeliver.jpg'} alt="We deliver" className="card-img-top" style={ {height: "200px"} }/>
                         <CardBody>
-                            <h5 className="text-center">We deliver!</h5>
+                            <h5 className="text-center">
+                                {props.data ? props.data.home.title2 : <Spinner color="#574AE2"/>}
+                            </h5>
                         </CardBody>
                     </Card>
                 </div>
@@ -44,7 +48,9 @@ const home = (props) => {
                     <Card style={ {width: "18rem"} } className="mx-auto homeCard">
                         <CardImg top width="100%" src={process.env.PUBLIC_URL + '/assets/images/heatthemup.jpg'} alt="Heat them up" className="card-img-top" style={ {height: "200px"} }/>
                         <CardBody>
-                            <h5 className="text-center">Heat them up!</h5>
+                            <h5 className="text-center">
+                                {props.data ? props.data.home.title3 : <Spinner color="#574AE2"/>}
+                            </h5>
                         </CardBody>
                     </Card>
                 </div>
@@ -52,7 +58,9 @@ const home = (props) => {
                     <Card style={ {width: "18rem"} } className="mx-auto homeCard">
                         <CardImg top width="100%" src={process.env.PUBLIC_URL + '/assets/images/eatit.jpg'} alt="eat it" className="card-img-top" style={ {height: "200px"} }/>
                         <CardBody>
-                            <h5 className="text-center">Eat it!</h5>
+                            <h5 className="text-center">
+                                {props.data ? props.data.home.title4 : <Spinner color="#574AE2"/>}
+                            </h5>
                         </CardBody>
                     </Card>
                 </div>

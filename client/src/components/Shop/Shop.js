@@ -8,7 +8,7 @@ import './Shop.scss';
 
 
 const Shop = (props) => {
-    props.data ? console.log(props.data) : console.log('hi')
+   
     return(
 
         <Fragment>

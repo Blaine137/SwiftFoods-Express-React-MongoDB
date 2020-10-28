@@ -3,7 +3,8 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const shopRouter = require('./routes/shopRouter');
+const getData = require('./routes/getData');
+
 
 require('dotenv/config');
 
@@ -18,7 +19,9 @@ mongoose.connect(process.env.DB_CONNECTION,{ useNewUrlParser: true }, () => {
     console.log('connected to db')
 })
 
-app.use('/shop', shopRouter)
+// app.use('/', homeRouter)
+
+app.use('/getData', getData)
 
 app.listen(PORT, function() {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);

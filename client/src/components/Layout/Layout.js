@@ -22,7 +22,7 @@ class Layout extends Component{
     }
 
     getData = async () => {
-        const response = await fetch('/shop');
+        const response = await fetch('/getData');
         const body = await response.json();
         return body;
         
@@ -33,7 +33,7 @@ class Layout extends Component{
             const pizza = this.state.Data.pizza;
             const salad = this.state.Data.salad;
             const burger = this.state.Data.burger;
-            
+            console.log(this.state.Data)
         }
 
         
@@ -47,11 +47,11 @@ class Layout extends Component{
                     <Switch>
                     
                         <Route exact path="/">
-                            <Home />
+                            <Home data={this.state.Data}/>
                         </Route>
 
                         <Route path="/about">
-                            <About/>
+                            <About data={this.state.Data}/>
                         </Route>
 
                         <Route path="/shop">
