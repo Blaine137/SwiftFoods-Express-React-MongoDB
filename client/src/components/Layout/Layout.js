@@ -29,13 +29,6 @@ class Layout extends Component{
     }
 
     render(){
-        if(this.state.Data){
-            const pizza = this.state.Data.pizza;
-            const salad = this.state.Data.salad;
-            const burger = this.state.Data.burger;
-            console.log(this.state.Data)
-        }
-
         
         return(
 

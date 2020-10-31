@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button, Label, Input, Col, Row, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import {Button, Label, Col, Row, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 import './OrderForm.scss';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 
