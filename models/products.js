@@ -87,6 +87,21 @@ const productSchema = mongoose.Schema({
             unique: true
         }
 
+    },
+    users: {
+        id: {
+            type: Number,
+            unique: true,
+            required: true
+        },
+        username: {
+            type: String,
+            unique: true
+        },
+        password: {
+            type: String,
+            unique: true
+        }
     }
 })
 

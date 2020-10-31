@@ -34,6 +34,7 @@ const Navigation = (props) => {
             <NavItem className="mr-3">
                 <NavLink to="/contact" activeClassName="active-link">Contact</NavLink>
             </NavItem>
+            <button className="btn-secondary subscribeBtn">Login</button>
           </Nav>
         </Collapse>
       </Navbar>
