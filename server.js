@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const getData = require('./routes/getData');
 
+/* RUN YARN IN ROOT/CLIENT IF YOU ARE ON LAPTOP */
 
 require('dotenv/config');
 

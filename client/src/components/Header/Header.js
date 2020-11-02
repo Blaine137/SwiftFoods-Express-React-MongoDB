@@ -25,7 +25,7 @@ const header = (props) => {
                     </div>
                 </div>
             </header>
-            <Navigation />
+            <Navigation toggle={props.toggleModal}/>
         </Fragment>
 
     );

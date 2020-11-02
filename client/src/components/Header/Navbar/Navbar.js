@@ -5,14 +5,17 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem
+  NavItem,
+  Button
 } from 'reactstrap';
 import {NavLink} from 'react-router-dom';
+import { Control, LocalForm, Errors } from 'react-redux-form';
 import './Navbar.scss';
+
 
 const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [showModal, toggleModal] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
   return (
@@ -34,10 +37,13 @@ const Navigation = (props) => {
             <NavItem className="mr-3">
                 <NavLink to="/contact" activeClassName="active-link">Contact</NavLink>
             </NavItem>
-            <button className="btn-secondary subscribeBtn">Login</button>
+            <Button className="btn-secondary subscribeBtn" onClick={() => props.toggle()}>Login</Button>
           </Nav>
         </Collapse>
       </Navbar>
+
+      
+
     </div>
   );
 }
