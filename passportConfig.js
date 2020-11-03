@@ -1,6 +1,5 @@
 const User = require("./models/User");
 const bcrypt = require("bcryptjs");
-const passport = require("passport");
 const localStrategy = require("passport-local").Strategy;
 
     //pass the same instance of passport to this function

@@ -7,15 +7,11 @@ const cookieParser = require('cookie-parser');
 const cors = require("cors");
 const session = require("express-session");
 const passport = require("passport");
-const passportLocal = require("passport-local").Strategy;
 const mongoose = require('mongoose');
-const User = require('./models/User');
 
 const getData = require('./routes/getData');
 const loginRouter = require('./routes/loginRouter');
 const registerRouter = require('./routes/registerRouter');
-
-/* RUN YARN IN ROOT/CLIENT IF YOU ARE ON LAPTOP */
 
 require('dotenv/config');
 
