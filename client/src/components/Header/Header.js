@@ -25,7 +25,7 @@ const header = (props) => {
                     </div>
                 </div>
             </header>
-            <Navigation toggle={props.toggleModal}/>
+            <Navigation toggleModal={props.toggleModal} toggleLogin={props.toggleLogin} loggedIn={props.loggedIn}/>
         </Fragment>
 
     );

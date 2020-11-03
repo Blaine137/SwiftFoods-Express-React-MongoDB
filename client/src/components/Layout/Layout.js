@@ -20,6 +20,7 @@ import {
   Button,
   Label
 } from 'reactstrap';
+import Axios from 'axios';
 
 
 
@@ -28,7 +29,10 @@ class Layout extends Component{
 
     state = {
         Data: null,
-        showModal: false
+        showModal: false,
+        username: null,
+        password: null,
+        loggedIn: false
     };
 
     componentDidMount(){
@@ -46,12 +50,31 @@ class Layout extends Component{
         this.setState({showModal: !this.state.showModal})
     }
 
+    toggleLogin = () => {
+        this.setState({loggedIn: !this.state.loggedIn})
+    }
+
+    registerUser = () => {
+        /* code for registering a user goes here */
+        Axios({
+            method: "POST",
+            data: {
+                username: this.state.username,
+                password: this.state.password
+            },
+            withCredentials: true,
+            url: 'http://localhost:3001/register',
+        }).then((res) => console.log(res)).catch(err => console.log(err));
+
+        
+    }
+
     render(){
         
         return(
 
             <Fragment>
-                <Header toggleModal={this.toggleModal}/>
+                <Header toggleModal={this.toggleModal} toggleLogin={this.toggleLogin} loggedIn={this.state.loggedIn}/>
                 
             
                 
@@ -81,10 +104,6 @@ class Layout extends Component{
                             <SubscribeForm/>
                         </Route>
 
-                        <Route  path="/SwiftFoods-React">
-                            <Home data={this.state.Data}/>
-                        </Route>
-
                         <Redirect to="/"/>
                     
                     </Switch>
@@ -94,28 +113,34 @@ class Layout extends Component{
                         <ModalBody>
                             <Form className="my-auto pt-2">
                                 <FormGroup row>
-                                        <Label for="username" lg={4} xs={12} md={4} className="">Username:</Label>
+                                        <Label for="username" lg={4} xs={12} md={4}>Username:</Label>
                                         <Col  md={6} xs={{
                                             size: 10,
                                             offset: 1
                                         }}>
-                                            <Input type="text" id="username" name="username" className="" />
+                                            <Input type="text" id="username" name="username" onChange={event => this.setState({username: event.target.value})} />
                                         </Col>
                                 </FormGroup>
                                 <FormGroup row>
-                                        <Label for="username" lg={4} md={4} xs={12} className="">Password:</Label>
+                                        <Label for="username" lg={4} md={4} xs={12}>Password:</Label>
                                         <Col  md={6} xs={{
                                             size: 10,
                                             offset: 1
                                         }}>
-                                            <Input type="password" id="password" name="password" className="" />
+                                            <Input type="password" id="password" name="password" onChange={event => this.setState({password: event.target.value})} />
                                         </Col>
                                 </FormGroup>
                             </Form>
                         </ModalBody>
                         <ModalFooter>
-                            <Button onClick={() => this.toggleModal()}>Login</Button>
-                            <Button onClick={() => this.toggleModal()}>Register</Button>
+                            <Button onClick={() => {
+                                this.toggleModal();
+                                this.toggleLogin();
+                            }}>Login</Button>
+                            <Button onClick={() => {
+                                this.toggleModal();
+                                this.registerUser();
+                            }}>Register</Button>
                         </ModalFooter>
                     </Modal>
                 

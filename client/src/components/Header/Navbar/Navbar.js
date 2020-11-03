@@ -15,7 +15,6 @@ import './Navbar.scss';
 
 const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showModal, toggleModal] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
   return (
@@ -37,7 +36,12 @@ const Navigation = (props) => {
             <NavItem className="mr-3">
                 <NavLink to="/contact" activeClassName="active-link">Contact</NavLink>
             </NavItem>
-            <Button className="btn-secondary subscribeBtn" onClick={() => props.toggle()}>Login</Button>
+            <Button className="btn-secondary subscribeBtn" 
+            onClick={() => {
+              props.loggedIn ? props.toggleLogin() : props.toggleModal()
+            }}>
+              {props.loggedIn ? "Logout" : "Login"}
+            </Button>
           </Nav>
         </Collapse>
       </Navbar>
