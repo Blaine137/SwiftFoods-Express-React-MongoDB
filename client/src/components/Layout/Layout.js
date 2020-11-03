@@ -22,9 +22,6 @@ import {
 } from 'reactstrap';
 import Axios from 'axios';
 
-
-
-
 class Layout extends Component{
 
     state = {
