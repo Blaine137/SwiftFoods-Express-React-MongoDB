@@ -54,6 +54,21 @@ class Layout extends Component{
         this.setState({loggedIn: !this.state.loggedIn})
     }
 
+    loginUser = () => {
+        Axios({
+            method: "POST",
+            data: {
+              username: this.state.username,
+              password: this.state.password,
+            },
+            withCredentials: true,
+            url: "http://localhost:3001/login",
+          }).then((res) => {
+            console.log(res)
+            this.toggleLogin();
+          });
+    }
+
     registerUser = () => {
         /* code for registering a user goes here */
         Axios({
@@ -135,7 +150,7 @@ class Layout extends Component{
                         <ModalFooter>
                             <Button onClick={() => {
                                 this.toggleModal();
-                                this.toggleLogin();
+                                this.loginUser();
                             }}>Login</Button>
                             <Button onClick={() => {
                                 this.toggleModal();

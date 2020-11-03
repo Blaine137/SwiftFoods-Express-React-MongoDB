@@ -7,7 +7,9 @@ const cookieParser = require('cookie-parser');
 const cors = require("cors");
 const session = require("express-session");
 const passport = require("passport");
+const passportLocal = require("passport-local").Strategy;
 const mongoose = require('mongoose');
+const User = require('./models/User');
 
 const getData = require('./routes/getData');
 const loginRouter = require('./routes/loginRouter');
@@ -44,9 +46,9 @@ app.use(
     })
   );
   app.use(cookieParser("secretcode"));
-//   app.use(passport.initialize());
-//   app.use(passport.session());
-//   require("./passportConfig")(passport);
+  app.use(passport.initialize());
+  app.use(passport.session());
+  require("./passportConfig")(passport);
 
 
 /* ROUTES */

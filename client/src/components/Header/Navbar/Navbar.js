@@ -39,6 +39,14 @@ const Navigation = (props) => {
             <Button className="btn-secondary subscribeBtn" 
             onClick={() => {
               props.loggedIn ? props.toggleLogin() : props.toggleModal()
+
+              if(props.loggedIn){
+                props.toggleLogin();
+                // props.toggleModal();
+              }else{
+                // props.loginUser();
+                props.toggleModal();
+              }
             }}>
               {props.loggedIn ? "Logout" : "Login"}
             </Button>
