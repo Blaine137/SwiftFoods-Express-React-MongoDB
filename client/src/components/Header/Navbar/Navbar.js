@@ -42,6 +42,7 @@ const Navigation = (props) => {
 
               if(props.loggedIn){
                 props.toggleLogin();
+                props.logout();
                 // props.toggleModal();
               }else{
                 // props.loginUser();

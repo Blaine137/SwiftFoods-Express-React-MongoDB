@@ -66,6 +66,16 @@ class Layout extends Component{
           });
     }
 
+    logoutUser = () => {
+        Axios({
+            method: "GET",
+            withCredentials: true,
+            url: "http://localhost:3001/logout",
+          }).then(res => {
+            console.log('loggedout: ',res)
+          });
+    }
+
     registerUser = () => {
         /* code for registering a user goes here */
         Axios({
@@ -76,7 +86,7 @@ class Layout extends Component{
             },
             withCredentials: true,
             url: 'http://localhost:3001/register',
-        }).then((res) => console.log(res)).catch(err => console.log(err));
+        }).then((res) => console.log('register res: ',res)).catch(err => console.log(err));
 
         
     }
@@ -86,7 +96,7 @@ class Layout extends Component{
         return(
 
             <Fragment>
-                <Header toggleModal={this.toggleModal} toggleLogin={this.toggleLogin} loggedIn={this.state.loggedIn}/>
+                <Header toggleModal={this.toggleModal} logout={this.logoutUser} toggleLogin={this.toggleLogin} loginUser={this.loginUser} loggedIn={this.state.loggedIn}/>
                 
             
                 
