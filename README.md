@@ -2,6 +2,8 @@
 
 SwiftFoods - Make time for things that matter by only spending two minutes cooking. 
 
+powered by: MongoDB, Express, React, Node
+
 
 
 -How To Run The Project-
