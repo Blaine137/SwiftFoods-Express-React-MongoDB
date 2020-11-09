@@ -27,6 +27,9 @@
     "typeface-montserrat": "^0.0.75",
     "typeface-yellowtail": "^0.0.72"
   },
+  "engines": {
+    "node": "14.7.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
