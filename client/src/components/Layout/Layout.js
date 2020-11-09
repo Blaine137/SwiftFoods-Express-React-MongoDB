@@ -71,8 +71,9 @@ class Layout extends Component{
             method: "GET",
             withCredentials: true,
             url: "http://localhost:3001/logout",
-          }).then(res => {
+          }).then((res, req) => {
             console.log('loggedout: ',res)
+            console.log('logged out: ', req)
           });
     }
 
