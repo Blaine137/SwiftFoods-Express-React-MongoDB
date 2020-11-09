@@ -27,17 +27,13 @@
     "typeface-montserrat": "^0.0.75",
     "typeface-yellowtail": "^0.0.72"
   },
-  "engines": {
-    "node": "14.7.0"
-  },
   "scripts": {
-    "start": "serve -s build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
-    "heroku-postbuild": "yarn run build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
