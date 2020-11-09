@@ -51,14 +51,12 @@ app.use(
 app.use('/getData', getData)
 app.use('/login', loginRouter)
 app.get('/logout', (req, res) => {
-  // console.log(req)
+  
   if(req.session){
     req.logout();
-    console.log('after logout: ', req)
+    
     req.session.destroy(() => {
       console.log('session destroyed')
-      
-      
     });
   
     res.clearCookie('secretcode')
