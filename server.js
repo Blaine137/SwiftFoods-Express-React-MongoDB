@@ -53,7 +53,7 @@ app.use('/login', loginRouter)
 app.get('/logout', (req, res) => {
   
   if(req.session){
-    req.logout();
+    req.logout(); //destroys passport
     
     req.session.destroy(() => {
       console.log('session destroyed')
