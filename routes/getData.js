@@ -5,7 +5,7 @@ const Products = require('../models/products');
 getData.route('/')
 .all((req, res, next) => {
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Content-Type', 'text/plain');
     next();
 })
 .get(async (req, res) => {
