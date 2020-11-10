@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "yarn dev",
+    "start": "yarn run dev",
     "start:prod": "nodemon server.js",
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
