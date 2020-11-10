@@ -5,10 +5,7 @@
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn run client\" \"yarn run server\"",
-    "build": "cd client && yarn run build"
-  },
-  "engines": {
-    "node": "14.7.0"
+    "build": "cd client && yarn predeploy"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
