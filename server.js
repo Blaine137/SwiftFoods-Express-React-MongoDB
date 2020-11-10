@@ -34,13 +34,13 @@ app.use(
       credentials: true,
     })
   );
-app.use(
-    session({
-      secret: "secretcode",
-      resave: true,
-      saveUninitialized: true,
-    })
-  );
+// app.use(
+//     session({
+//       secret: "secretcode",
+//       resave: true,
+//       saveUninitialized: true,
+//     })
+//   );
   app.use(cookieParser("secretcode"));
   app.use(passport.initialize());
   app.use(passport.session());
@@ -49,21 +49,21 @@ app.use(
 
 /* ROUTES */
 app.use('/getData', getData)
-app.use('/login', loginRouter)
-app.get('/logout', (req, res) => {
+// app.use('/login', loginRouter)
+// app.get('/logout', (req, res) => {
   
-  if(req.session){
-    req.logout(); //destroys passport
+//   if(req.session){
+//     req.logout(); //destroys passport
     
-    req.session.destroy(() => {
-      console.log('session destroyed')
-    });
+//     req.session.destroy(() => {
+//       console.log('session destroyed')
+//     });
   
-    res.clearCookie('secretcode')
+//     res.clearCookie('secretcode')
     
-  }
-})
-app.use('/register', registerRouter)
+//   }
+// })
+// app.use('/register', registerRouter)
 
 
 
