@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "start": "yarn run dev",
-    "start:prod": "nodemon server.js",
+    "start": "node server.js && yarn build",
+    "start:prod": "node server.js",
     "client": "cd client && yarn start",
-    "server": "nodemon server.js",
+    "server": "node server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn run client\" \"yarn run server\"",
     "build": "cd client && yarn predeploy"
   },
