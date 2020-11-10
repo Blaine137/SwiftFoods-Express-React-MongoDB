@@ -1,11 +1,12 @@
 {
   "scripts": {
-    "start": "node server && yarn build",
+    
     "start:prod": "node server",
     "client": "cd client && yarn start",
     "server": "node server",
     "dev": "concurrently --kill-others-on-fail \"yarn run client\" \"yarn run server\"",
-    "build": "cd client && yarn predeploy"
+    "build": "cd client && yarn predeploy",
+    "start": "node server && yarn build"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
