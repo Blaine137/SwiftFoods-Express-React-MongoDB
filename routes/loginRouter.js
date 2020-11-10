@@ -7,7 +7,7 @@ const Products = require('../models/products');
 loginRouter.route('/')
 .all((req, res, next) => {
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Content-Type', 'application/json');
     next();
 })
 .post((req, res, next) => {
