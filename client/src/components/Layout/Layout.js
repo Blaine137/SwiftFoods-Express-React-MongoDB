@@ -59,7 +59,7 @@ class Layout extends Component{
               password: this.state.password,
             },
             withCredentials: true,
-            url: "http://localhost:3001/login",
+            url: "http://localhost:8080/login",
           }).then((res) => {
             console.log(res)
             this.toggleLogin();
@@ -70,11 +70,8 @@ class Layout extends Component{
         Axios({
             method: "GET",
             withCredentials: true,
-            url: "http://localhost:3001/logout",
-          }).then((res, req) => {
-            console.log('loggedout: ',res)
-            console.log('logged out: ', req)
-          });
+            url: "http://localhost:8080/logout",
+          }).catch(err => console.log(err));
     }
 
     registerUser = () => {
@@ -86,7 +83,7 @@ class Layout extends Component{
                 password: this.state.password
             },
             withCredentials: true,
-            url: 'http://localhost:3001/register',
+            url: 'http://localhost:8080/register',
         }).then((res) => console.log('register res: ',res)).catch(err => console.log(err));
 
         
