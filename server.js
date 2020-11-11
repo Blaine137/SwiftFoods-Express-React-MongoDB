@@ -54,12 +54,12 @@ app.get('/logout', (req, res) => {
   
   if(req.session){
     req.logout(); //destroys passport
-    
-    req.session.destroy(() => {
-      console.log('session destroyed')
-    });
+    res.send('User logged out!')
+    // req.session.destroy(() => {
+    //   console.log('session destroyed')
+    // });
   
-    res.clearCookie('secretcode')
+    // res.clearCookie('secretcode')
     
   }
 })
