@@ -62,7 +62,10 @@ app.get('/logout', async(req, res) => {
     res.clearCookie('secretcode')
     
   }
-})
+}) //logout route
+app.get('/*', (req, res) => {
+  res.redirect('/');
+}) //redirect route for heroku
 app.use('/register', registerRouter)
 
 
