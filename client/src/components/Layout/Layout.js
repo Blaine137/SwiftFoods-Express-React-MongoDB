@@ -100,7 +100,7 @@ class Layout extends Component{
                 
                     <Switch>
                     
-                        <Route exact path="https://swiftfoods.herokuapp.com/">
+                        <Route exact path="/">
                             <Home data={this.state.Data}/>
                         </Route>
 
@@ -124,7 +124,7 @@ class Layout extends Component{
                             <SubscribeForm/>
                         </Route>
 
-                        <Redirect to="https://swiftfoods.herokuapp.com/"/>
+                        <Redirect to="/"/>
                     
                     </Switch>
 
