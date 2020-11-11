@@ -100,31 +100,31 @@ class Layout extends Component{
                 
                     <Switch>
                     
-                        <Route exact path="/">
+                        <Route exact path="https://swiftfoods.herokuapp.com/">
                             <Home data={this.state.Data}/>
                         </Route>
 
-                        <Route path="/about">
+                        <Route path="https://swiftfoods.herokuapp.com/about">
                             <About data={this.state.Data}/>
                         </Route>
 
-                        <Route path="/shop">
+                        <Route path="https://swiftfoods.herokuapp.com/shop">
                             <Shop data={this.state.Data}/>
                         </Route>
 
-                        <Route path="/contact">
+                        <Route path="https://swiftfoods.herokuapp.com/contact">
                             <Contact/>
                         </Route>
 
-                        <Route path="/order">
+                        <Route path="https://swiftfoods.herokuapp.com/order">
                             <Order/>
                         </Route>
 
-                        <Route path="/subscribe">
+                        <Route path="https://swiftfoods.herokuapp.com/subscribe">
                             <SubscribeForm/>
                         </Route>
 
-                        <Redirect to="/"/>
+                        <Redirect to="https://swiftfoods.herokuapp.com/"/>
                     
                     </Switch>
 
