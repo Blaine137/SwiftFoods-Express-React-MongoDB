@@ -104,23 +104,23 @@ class Layout extends Component{
                             <Home data={this.state.Data}/>
                         </Route>
 
-                        <Route path="https://swiftfoods.herokuapp.com/about">
+                        <Route path="/about">
                             <About data={this.state.Data}/>
                         </Route>
 
-                        <Route path="https://swiftfoods.herokuapp.com/shop">
+                        <Route path="/shop">
                             <Shop data={this.state.Data}/>
                         </Route>
 
-                        <Route path="https://swiftfoods.herokuapp.com/contact">
+                        <Route path="/contact">
                             <Contact/>
                         </Route>
 
-                        <Route path="https://swiftfoods.herokuapp.com/order">
+                        <Route path="/order">
                             <Order/>
                         </Route>
 
-                        <Route path="https://swiftfoods.herokuapp.com/subscribe">
+                        <Route path="/subscribe">
                             <SubscribeForm/>
                         </Route>
 
