@@ -51,6 +51,9 @@ app.use(
 app.use('/getData', getData)
 app.use('/login', loginRouter)
 app.get('/logout', (req, res) => {
+
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
   
   if(req.session){
     req.logout(); //destroys passport
