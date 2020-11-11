@@ -71,7 +71,7 @@ class Layout extends Component{
             method: "GET",
             withCredentials: true,
             url: "https://swiftfoods.herokuapp.com/logout",
-          }).then(res => console.log(err)).catch(err => console.log(err));
+          }).then(res => console.log(res)).catch(err => console.log(err));
     }
 
     registerUser = () => {
