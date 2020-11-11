@@ -50,7 +50,7 @@ app.use(
 /* ROUTES */
 app.use('/getData', getData)
 app.use('/login', loginRouter)
-app.get('/logout', (req, res) => {
+app.get('/logout', async(req, res) => {
   
   if(req.session){
     req.logout(); //destroys passport
