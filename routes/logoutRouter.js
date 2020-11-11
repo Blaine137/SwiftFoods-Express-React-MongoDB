@@ -11,7 +11,7 @@ logoutRouter.route('/')
 })
 .get((req, res, next) => {
    req.logout();
-   res.send({authenticated: false})
+   res.send('User has logged out')
 }); //get request was async
 
 module.exports = logoutRouter;
