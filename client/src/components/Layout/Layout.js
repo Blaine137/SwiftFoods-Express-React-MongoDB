@@ -61,8 +61,10 @@ class Layout extends Component{
             withCredentials: true,
             url: "https://swiftfoods.herokuapp.com/login",
           }).then((res) => {
-            console.log(res)
-            this.toggleLogin();
+            console.log(res.data)
+            if(res.data != "No User Exists"){
+                this.toggleLogin();
+            }
           });
     }
 
