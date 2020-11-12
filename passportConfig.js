@@ -4,11 +4,16 @@ const localStrategy = require("passport-local").Strategy;
 
     //pass the same instance of passport to this function
 module.exports = function (passport) {
+    //in order to use localStrategy, it must be inside passport.use()
   passport.use(
+      //localStrategy is used to verify username and password
     new localStrategy((username, password, next) => {
+        //try and find the username in the database
       User.findOne({ username: username }, (err, user) => {
         if (err) throw err;
+        console.log('this is working')
         if (!user) return next(null, false);
+          //decrypts the password from database and compares to the one entered
         bcrypt.compare(password, user.password, (err, result) => {
           if (err) throw err;
           if (result === true) {
