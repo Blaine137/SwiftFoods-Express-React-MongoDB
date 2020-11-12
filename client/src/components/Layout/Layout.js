@@ -35,7 +35,7 @@ class Layout extends Component{
     componentDidMount(){
         this.getData().then(res => this.setState({Data: res.data}))
     }
-
+        
     getData = async () => {
         const response = await fetch('/getData');
         const body = await response.json();
@@ -59,7 +59,7 @@ class Layout extends Component{
               password: this.state.password,
             },
             withCredentials: true,
-            url: "https://swiftfoods.herokuapp.com/login",
+            url: "/login",
           }).then((res) => {
             console.log(res.data)
             if(res.data != "No User Exists"){
@@ -72,7 +72,7 @@ class Layout extends Component{
         Axios({
             method: "GET",
             withCredentials: true,
-            url: "https://swiftfoods.herokuapp.com/logout",
+            url: "/logout",
           }).then(res => console.log(res.data)).catch(err => console.log(err));
     }
 
@@ -85,7 +85,7 @@ class Layout extends Component{
                 password: this.state.password
             },
             withCredentials: true,
-            url: 'https://swiftfoods.herokuapp.com/register',
+            url: '/register',
         }).then((res) => console.log(res.data)).catch(err => console.log(err));
 
         
