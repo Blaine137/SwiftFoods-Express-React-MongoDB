@@ -50,7 +50,7 @@ class SubscribeForm extends Component {
             //modal goes here
             return(
                 <div className="container">
-                    <h3>Thank you for subscribing!</h3>
+                    <h3 className="text-center mt-5 mb-5 align-self-center">Thank you for subscribing!</h3>
                 </div>
             );
         }else{
