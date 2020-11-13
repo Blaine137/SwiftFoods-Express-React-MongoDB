@@ -54,6 +54,7 @@ class SubscribeForm extends Component {
                     <p>Dear {this.props.user}, </p>
                     <p>thank you so much for subscribing!</p>
                     <p>We have sent an email to you, please check your spam folder if it cannot be found.</p>
+                    <p>Sincerly, Swiftfoods</p>
                 </div>
             );
         }else{
