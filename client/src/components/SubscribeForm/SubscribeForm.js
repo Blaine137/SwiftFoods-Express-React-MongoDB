@@ -50,14 +50,7 @@ class SubscribeForm extends Component {
             //modal goes here
             return(
                 <div className="container">
-                    <Modal isOpen={true}>
-                        <ModalHeader>
-                            Thank You For Subscribing!
-                        </ModalHeader>
-                        <ModalBody>
-                            Hello user, thank you for subscribing. you will recieve an email sortly for further directions.
-                        </ModalBody>
-                    </Modal>
+                    <h3>Thank you for subscribing!</h3>
                 </div>
             );
         }else{
