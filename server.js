@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === "production") {
 mongoose.connect(process.env.DB_CONNECTION,{ useNewUrlParser: true }, () => {
     console.log('connected to db')
 })
-//test
+
 /* MIDDLEWARE */
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

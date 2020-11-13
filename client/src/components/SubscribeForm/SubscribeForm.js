@@ -46,6 +46,19 @@ class SubscribeForm extends Component {
 
             
 
+        if(this.props.loggedIn){
+            //modal goes here
+            return(
+                <Modal>
+                    <ModalHeader>
+                        Thank You For Subscribing!
+                    </ModalHeader>
+                    <ModalBody>
+                        Hello user, thank you for subscribing. you will recieve an email sortly for further directions.
+                    </ModalBody>
+                </Modal>
+            );
+        }else{
             return(
 
                 <div className="container" id="subscribeForm">
@@ -385,6 +398,7 @@ class SubscribeForm extends Component {
                 </div>
 
             );
+        }
 
     }
 
