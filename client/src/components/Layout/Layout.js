@@ -123,7 +123,7 @@ class Layout extends Component{
                         </Route>
 
                         <Route path="/subscribe">
-                            <SubscribeForm loggedIn={this.state.loggedIn}/>
+                            <SubscribeForm loggedIn={this.state.loggedIn} user={this.state.username}/>
                         </Route>
 
                         <Redirect to="/"/>

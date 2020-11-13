@@ -51,6 +51,7 @@ class SubscribeForm extends Component {
             return(
                 <div className="container">
                     <h3 className="text-center mt-5 mb-5 align-self-center">Thank you for subscribing!</h3>
+                    <p>Dear {this.props.user}, thank you so much for subscribing!</p>
                 </div>
             );
         }else{
