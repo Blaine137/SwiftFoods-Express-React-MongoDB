@@ -13,11 +13,9 @@ const home = (props) => {
       <Fragment>
         <div className="container">
             <div className="row">
-                <Fade top>
                     <div className="col-12">
                         <h3 class="text-center mt-5 mb-5">How We Work!</h3>
                     </div>
-                </Fade>
             </div>
         </div>
         <div className="container">
