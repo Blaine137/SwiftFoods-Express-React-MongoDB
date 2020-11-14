@@ -9,7 +9,7 @@ const About = (props) => {
             <Fragment>
                      <div class="container">
                         <div class="row">
-                            <Fade top className="animatedHeader">
+                            <Fade top>
                                 <div class="col-12">
                                     <h3 class="text-center mt-5 mb-5">About Us!</h3>
                                 </div>
