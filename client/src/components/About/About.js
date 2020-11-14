@@ -10,7 +10,7 @@ const About = (props) => {
                      <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <Fade top>
+                                <Fade top className="mt-5 mb-5 text-center">
                                     <h3 class="text-center mt-5 mb-5">About Us!</h3>
                                 </Fade>
                             </div>
