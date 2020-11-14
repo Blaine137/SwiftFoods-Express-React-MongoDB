@@ -9,9 +9,9 @@ const About = (props) => {
             <Fragment>
                      <div class="container">
                         <div class="row">
-                            <Fade top>
+                            <Fade top className="ml-auto mr-auto">
                                 <div class="col-12">
-                                    <h3 class="text-center mt-5 mb-5 ml-auto mr-auto">About Us!</h3>
+                                    <h3 class="text-center mt-5 mb-5">About Us!</h3>
                                 </div>
                             </Fade>
                         </div>
