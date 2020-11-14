@@ -9,11 +9,11 @@ const About = (props) => {
             <Fragment>
                      <div class="container">
                         <div class="row">
-                            <Fade top>
-                                <div class="col-12">
+                            <div class="col-12">
+                                <Fade top>
                                     <h3 class="text-center mt-5 mb-5">About Us!</h3>
-                                </div>
-                            </Fade>
+                                </Fade>
+                            </div>
                         </div>
                     </div>
                     <div class="container">
