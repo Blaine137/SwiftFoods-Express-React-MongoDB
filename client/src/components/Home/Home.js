@@ -6,10 +6,6 @@ import './Home.scss';
 
 const home = (props) => {
 
-    // if(props.data){
-    //     const title = props.data;
-    // console.log(title)
-    // }
   return (
 
       <Fragment>

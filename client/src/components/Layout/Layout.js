@@ -77,7 +77,7 @@ class Layout extends Component{
     }
 
     registerUser = () => {
-        /* code for registering a user goes here */
+        
         Axios({
             method: "POST",
             data: {
