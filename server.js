@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080; //heroku: 8080  localhost: 3001
 
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -12,6 +12,7 @@ const mongoose = require('mongoose');
 const getData = require('./routes/getData');
 const loginRouter = require('./routes/loginRouter');
 const registerRouter = require('./routes/registerRouter');
+const paymentRouter = require("./routes/paymentRouter");
 
 require('dotenv/config');
 
@@ -30,7 +31,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
     cors({
-      origin: "https://swiftfoods.herokuapp.com/", // <-- location of the react app were connecting to -- was http://localhost:3000 for local testing
+      origin: "https://swiftfoods.herokuapp.com/", // <-- location of the react app were connecting to -- was http://localhost:3000 for local testing  heroku: https://swiftfoods.herokuapp.com/
       credentials: true,
     })
   );
@@ -63,10 +64,13 @@ app.get('/logout', async(req, res) => {
     
   }
 }) //logout route
+app.use('/register', registerRouter)
+app.use('/payment', paymentRouter)
+
+
 app.get('/*', (req, res) => {
   res.redirect('/');
 }) //redirect route for heroku
-app.use('/register', registerRouter)
 
 
 
