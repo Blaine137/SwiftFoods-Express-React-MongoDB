@@ -10,6 +10,9 @@ export default function OrderForm(props) {
 	//Reactstrap Form state - Name, Email, Address
 	let [errors , setErrors] = useState({
 		name: null,
+		pizzas: null,
+		salads: null,
+		burgers: null,
 		email: null,
 		street: null,
 		city: null,
@@ -18,6 +21,9 @@ export default function OrderForm(props) {
 	});
 	let [formValues, setFormValues] = useState({
 		name: null,
+		pizzas: 0,
+		salads: 0,
+		burgers: 0,
 		email: null,
 		street: null,
 		city: null,
@@ -41,10 +47,11 @@ export default function OrderForm(props) {
 			headers: {
 			"Content-Type": "application/json"
 			},
-			body: JSON.stringify({items: [{ id: "xl-tshirt" }]})
+			body: JSON.stringify({items: [{ numOfPizzas: formValues.pizzas, numOfSalads: formValues.salads, numOfBurgers: formValues.burgers }]})
 		})
 		.then( res => {
 			return res.json();
+			
 		})
 		.then(data => {
 			setClientSecret(data.clientSecret);
@@ -54,6 +61,7 @@ export default function OrderForm(props) {
 
 	//if info is required check and makes sure it is not empty
 	const validateInput = target => {
+		var regex = ('^[0-9]$');
 		if(target.required) {
 			if(target.value === null || target.value === "") {
 				setErrors({ ...errors, ...{ [target.name]: "This field is required and must not be Blank." } });
@@ -61,6 +69,18 @@ export default function OrderForm(props) {
 			}
 			if(target.name === "email" && !target.value.includes('@')) {
 				setErrors({ ...errors, ...{ [target.name]: "Please Enter a valid email address" } });
+				return false;
+			}
+			if(target.name === "pizzas" && !target.value.match(regex)){
+				setErrors({...errors, ...{ [target.name]: "Please enter only numbers 0-9" }})
+				return false;
+			}
+			if(target.name === "salads" && !target.value.match(regex)){
+				setErrors({...errors, ...{ [target.name]: "Please enter only numbers 0-9" }})
+				return false;
+			}
+			if(target.name === "burgers" && !target.value.match(regex)){
+				setErrors({...errors, ...{ [target.name]: "Please enter only numbers 0-9" }})
 				return false;
 			}
 		}
@@ -125,16 +145,23 @@ export default function OrderForm(props) {
                     Refresh the page to pay again.
                 </p>
                 <FormGroup className="mb-5">
-                    <h4>Who are you?</h4>
                     <Label className="mt-4"  for="name" > Your Name *</Label>
                     <Input className="form-control mb-4" type="text" name="name" id="name" maxLength="60" required invalid={errors.name} onBlur={HandleBlur} />
-                    <FormFeedback className="feedback">{errors.name}</FormFeedback>
+					<FormFeedback className="feedback">{errors.name}</FormFeedback>
+					<Label className="mt-4"  for="pizzas" > Pizzas*</Label>
+                    <Input className="form-control mb-4" type="text" name="pizzas" id="pizzas" maxLength="60" required invalid={errors.pizzas} onBlur={HandleBlur} />
+                    <FormFeedback className="feedback">{errors.pizzas}</FormFeedback>
+					<Label className="mt-4"  for="salads" > Salads*</Label>
+                    <Input className="form-control mb-4" type="text" name="salads" id="salads" maxLength="60" required invalid={errors.salads} onBlur={HandleBlur} />
+                    <FormFeedback className="feedback">{errors.salads}</FormFeedback>
+					<Label className="mt-4"  for="salads" > Burgers*</Label>
+                    <Input className="form-control mb-4" type="text" name="burgers" id="burgers" maxLength="60" required invalid={errors.burgers} onBlur={HandleBlur} />
+                    <FormFeedback className="feedback">{errors.burgers}</FormFeedback>
                     <Label className="mt-4" for="email">Your Email *</Label>
                     <Input className="form-control mb-4" type="email" name="email" id="email" required invalid={errors.email} onBlur={HandleBlur}/>
                     <FormFeedback className="feedback">{errors.email}</FormFeedback>
                 </FormGroup>
                 <FormGroup className="mt-5">
-                    <h4 className="mt-5">Where can we ship your goods?</h4>
                     <Label className="mt-4"  for="street">Street *</Label>
                     <Input className="form-control mb-4" type="text" name="street" id="street" required invalid={errors.street} onBlur={HandleBlur} spellCheck="true" />			
                     <FormFeedback className="feedback">{errors.street}</FormFeedback>
@@ -149,7 +176,6 @@ export default function OrderForm(props) {
                     <FormFeedback className="feedback">{errors.postal_code}</FormFeedback>
                 </FormGroup>
                 <FormGroup >
-                    <h4 className="mt-5">How are you paying today?</h4>
                     <label for="card-element">Credit or debit card</label>
                     <CardElement options={{hidePostalCode: true}}name="card-element" className="form-control mb-4 stripeElement" onChange={HandleBlur} />
                     {/* Show any error that happens when processing the payment */}

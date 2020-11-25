@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 8080; //heroku: 8080  localhost: 3001
+const PORT = process.env.PORT || 3001; //heroku: 8080  localhost: 3001
 
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
     cors({
-      origin: "https://swiftfoods.herokuapp.com/", // <-- location of the react app were connecting to -- was http://localhost:3000 for local testing  heroku: https://swiftfoods.herokuapp.com/
+      origin: "http://localhost:3000/", // <-- location of the react app were connecting to -- was http://localhost:3000 for local testing  heroku: https://swiftfoods.herokuapp.com/
       credentials: true,
     })
   );

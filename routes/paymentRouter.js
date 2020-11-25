@@ -1,5 +1,6 @@
 const express = require("express");
 const paymentRouter = express.Router();
+require('dotenv/config'); //import the env variables
 const stripe = require("stripe")(process.env.PRIVATE_STRIPEKEY);
 
 const calculateOrderAmount = items => {
@@ -18,6 +19,7 @@ paymentRouter.route('/')
 .post(async (req, res) => {
 
     const { items } = req.body;
+    console.log(items)
 
     // Create a PaymentIntent with the order amount and currency
   
