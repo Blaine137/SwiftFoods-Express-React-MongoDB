@@ -14,3 +14,21 @@
 .active-link{
     color: white !important;
 }
+
+.cart{
+    
+    color: #E1ACF1 !important;
+    border: none !important;
+    transition: transform .5s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cart:active, .cart:focus, .cart:hover{
+    
+    box-shadow: none !important;
+}
+
+.cart:hover{
+    color: white !important;
+    transform: scale(1.1);
+}

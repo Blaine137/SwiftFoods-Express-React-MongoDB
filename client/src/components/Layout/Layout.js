@@ -5,6 +5,7 @@ import About from '../About/About';
 import Shop from '../Shop/Shop';
 import Contact from '../Contact/Contact';
 import SubscribeForm from '../SubscribeForm/SubscribeForm';
+import Checkout from '../Checkout/Checkout';
 import Footer from '../Footer/Footer';
 import Order from '../Order/Order';
 import {Switch, Route, Redirect} from 'react-router-dom';
@@ -21,6 +22,7 @@ import {
   Label
 } from 'reactstrap';
 import Axios from 'axios';
+
 
 class Layout extends Component{
 
@@ -92,6 +94,7 @@ class Layout extends Component{
     }
 
     render(){
+
         
         return(
 
@@ -119,6 +122,10 @@ class Layout extends Component{
                         </Route>
 
                         <Route path="/order">
+                            <Order/>
+                        </Route>
+
+                        <Route path="/checkout">
                             <Order/>
                         </Route>
 

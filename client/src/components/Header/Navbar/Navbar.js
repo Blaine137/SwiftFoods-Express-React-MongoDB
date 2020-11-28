@@ -8,8 +8,7 @@ import {
   NavItem,
   Button
 } from 'reactstrap';
-import {NavLink} from 'react-router-dom';
-import { Control, LocalForm, Errors } from 'react-redux-form';
+import {Link, NavLink} from 'react-router-dom';
 import './Navbar.scss';
 
 
