@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import './OrderForm.scss';
 import {Button, Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap';
 import { Link } from "react-router-dom";
+import Roll from 'react-reveal/Roll';
 
 
 
@@ -47,7 +48,8 @@ export default function OrderForm(props) {
 	
 
 	return (
-            <Form className="form mx-auto p-5"  id="payment-form" onSubmit={(e) => {e.preventDefault()}}>
+        <Roll left>
+			<Form className="form mx-auto p-5"  id="payment-form" onSubmit={(e) => {e.preventDefault()}}>
                 <FormGroup className="mb-5">
 					<Label className="mt-4"  for="pizzas" > Pizzas*</Label>
                     <Input className="form-control mb-4" type="text" name="pizzas" id="pizzas" maxLength="60" required invalid={errors.pizzas} onBlur={HandleBlur} />
@@ -69,5 +71,6 @@ export default function OrderForm(props) {
 						}}>Checkout</Button>
 				</Link>
             </Form>
+		</Roll>
 	);
 }
