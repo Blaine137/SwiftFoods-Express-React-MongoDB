@@ -51,11 +51,11 @@ const Checkout = (props) => {
 			setClientSecret(data.clientSecret);
 		})
 		.catch(err => console.log(err));
-	}, []);
+	});
 
 	//if info is required check and makes sure it is not empty
 	const validateInput = target => {
-		var regex = ('^[0-9]$');
+		
 		if(target.required) {
 			if(target.value === null || target.value === "") {
 				setErrors({ ...errors, ...{ [target.name]: "This field is required and must not be Blank." } });

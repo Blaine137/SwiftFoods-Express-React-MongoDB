@@ -8,7 +8,7 @@ import {
   NavItem,
   Button
 } from 'reactstrap';
-import {Link, NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import './Navbar.scss';
 
 

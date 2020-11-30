@@ -63,7 +63,7 @@ class Layout extends Component{
             url: "/login",
           }).then((res) => {
             console.log(res.data)
-            if(res.data != "No User Exists"){
+            if(res.data !== "No User Exists"){
                 this.toggleLogin();
             }
           });

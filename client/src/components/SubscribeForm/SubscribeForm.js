@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Button, Label, Col, Row, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 import './SubscribeForm.scss';
 import { Control, LocalForm, Errors } from 'react-redux-form';
-import Roll from 'react-reveal/Roll';
+
 
 const required = val => val && val.length; //if val is not undefined and if the length is greater than zero
 const maxLength = len => val => !val || (val.length <= len); 

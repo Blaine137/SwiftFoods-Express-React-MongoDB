@@ -3,7 +3,6 @@ import {
   Card, CardImg, CardBody, Spinner
 } from 'reactstrap';
 import './Home.scss';
-import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 
 const home = (props) => {
