@@ -23,19 +23,19 @@ const Navigation = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem className="mr-3">
+            <NavItem className="mr-3 my-auto">
               <NavLink exact to="/" activeClassName="active-link">Home</NavLink>
             </NavItem>
-            <NavItem className="mr-3">
+            <NavItem className="mr-3 my-auto">
               <NavLink to="/about" activeClassName="active-link">About us</NavLink>
             </NavItem>
-            <NavItem className="mr-3">
+            <NavItem className="mr-3 my-auto">
                 <NavLink to="/shop" activeClassName="active-link">Shop</NavLink>
             </NavItem>
-            <NavItem className="mr-3">
+            <NavItem className="mr-3 my-auto">
                 <NavLink to="/contact" activeClassName="active-link">Contact</NavLink>
             </NavItem>
-            <Button className="btn-secondary subscribeBtn" 
+            <Button className="btn-secondary subscribeBtn h-60" 
             onClick={() => {
               props.loggedIn ? props.toggleLogin() : props.toggleModal()
 

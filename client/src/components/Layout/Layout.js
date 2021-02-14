@@ -139,7 +139,7 @@ class Layout extends Component{
                     <Modal isOpen={this.state.showModal} toggle={this.toggleModal}>
                         <ModalHeader>Login/Register!</ModalHeader>
                         <ModalBody>
-                            <Form className="my-auto pt-2">
+                            <Form className="my-auto pt-2 mx-auto">
                                 <FormGroup row>
                                         <Label for="username" lg={4} xs={12} md={4}>Username:</Label>
                                         <Col  md={6} xs={{
