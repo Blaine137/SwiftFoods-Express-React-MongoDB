@@ -1,36 +1,25 @@
 .jumbotron{
-    background-color: #222A68 !important;
-    color: #E2AdF2;
+    background-color: rgba(241, 255, 244, 100) !important;
+    color: rgba(80, 82, 78, 100);
+    border-radius: 20px !important;
 }
 
-.headerLogo{
-    background-color: #222A68 !important;
+.subscribe{
+    color: rgba(80, 82, 78, 100) !important;
+    background-color: rgba(240, 240, 240, 100) !important;
     border: none !important;
+    &:hover, &:active, &:focus{
+        color: rgba(80, 82, 78, 100) !important;
+        background-color: rgba(240, 240, 240, 100) !important;
+        transform: scale(1.1);
+        box-shadow: none !important;
+    }
 }
 
-.subscribeBtn{
-    background-color: #E2AdF2 !important;
-    color: #222A68 !important;
-    border: none !important;
-    transition: transform .5s ease-in-out;
-    font-family: 'Montserrat', sans-serif;
+.h3{
+    color: black !important;
 }
 
-.subscribeBtn:active, .subscribeBtn:focus, .subscribeBtn:hover{
-    background-color: rgba(226, 173, 242, .6) !important;
-    box-shadow: none !important;
-}
-
-.subscribeBtn:hover{
-    color: white !important;
-    transform: scale(1.1);
-}
-
-h1{
-    font-family: 'Montserrat', sans-serif;
-}
-
-h2{
-    color: rgba(226, 173, 242, .6);
-    font-family: 'Montserrat', sans-serif;
+.h6{
+    color: grey !important;
 }

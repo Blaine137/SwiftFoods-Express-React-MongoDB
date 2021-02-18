@@ -3,7 +3,6 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   Button
@@ -18,24 +17,20 @@ const Navigation = (props) => {
 
   return (
     <div>
-      <Navbar dark expand="md" className="navbar" sticky="top">
-      <NavbarBrand href="#"><NavLink exact to="/"><img src={process.env.PUBLIC_URL + '/assets/images/swiftfoodslogodcolor.png'} alt="logo" height="30" width="30"/></NavLink></NavbarBrand>
-        <NavbarToggler onClick={toggle} />
+      <Navbar dark expand="md" className="navbar w-75 ml-auto mr-auto p-0" sticky="top">
+        <NavbarToggler onClick={toggle} className="navToggler" />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+          <Nav className="ml-auto" navbar>
             <NavItem className="mr-3 my-auto">
               <NavLink exact to="/" activeClassName="active-link">Home</NavLink>
             </NavItem>
             <NavItem className="mr-3 my-auto">
-              <NavLink to="/about" activeClassName="active-link">About us</NavLink>
-            </NavItem>
-            <NavItem className="mr-3 my-auto">
-                <NavLink to="/shop" activeClassName="active-link">Shop</NavLink>
+              <NavLink to="/order" activeClassName="active-link">Order</NavLink>
             </NavItem>
             <NavItem className="mr-3 my-auto">
                 <NavLink to="/contact" activeClassName="active-link">Contact</NavLink>
             </NavItem>
-            <Button className="btn-secondary subscribeBtn h-60" 
+            <Button className="btn-secondary loginBtn h-60" 
             onClick={() => {
               props.loggedIn ? props.toggleLogin() : props.toggleModal()
 
@@ -53,9 +48,6 @@ const Navigation = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
-
-      
-
     </div>
   );
 }

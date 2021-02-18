@@ -13,18 +13,11 @@ const Shop = (props) => {
     return(
 
         <Fragment>
-            <div className="container">
-                <div className="row">
-                    <div className="col-12">
-                        <h3 className="text-center mt-5 mb-5">Shop!</h3>
-                    </div>
-                </div>
-            </div>
-            <div className="row">
+            <div className="row mt-2">
                 <div className="col-12 col-md-6 col-lg-4">
                     <Zoom left>
-                        <Card className="mx-auto mb-4 shopCard">
-                            <CardImg top width="100%" src={process.env.PUBLIC_URL + '/assets/images/peppizza.jpg'} alt="pepperoni pizza" />
+                        <Card className="mx-auto mb-4 shopCard  border-0">
+                            <CardImg className="rounded-circle" top width="100%" src={process.env.PUBLIC_URL + '/assets/images/peppizza.jpg'} alt="pepperoni pizza" />
                             <CardBody className="text-center">
                                 <CardTitle tag="h5">
                                     {props.data ? props.data.pizza.title : <Spinner color="#574AE2"/>}
@@ -46,8 +39,8 @@ const Shop = (props) => {
                 </div>
                 <div className="col-12 col-md-6 col-lg-4">
                     <Zoom clear>
-                        <Card className="mx-auto shopCard mb-4">
-                            <CardImg top width="100%" src={process.env.PUBLIC_URL + '/assets/images/salad.jpg'} alt="salad" />
+                        <Card className="mx-auto shopCard mb-4 border-0">
+                            <CardImg className="rounded-circle" top width="100%" src={process.env.PUBLIC_URL + '/assets/images/salad.jpg'} alt="salad" />
                             <CardBody className="text-center">
                                 <CardTitle tag="h5">
                                     {props.data ? props.data.salad.title : <Spinner color="#574AE2"/>}
@@ -69,8 +62,8 @@ const Shop = (props) => {
                 </div>
                 <div className="col-12 col-md-6-offset-2 col-lg-4">
                     <Zoom right>
-                        <Card className="mx-auto shopCard mb-4">
-                            <CardImg top width="100%" src={process.env.PUBLIC_URL + '/assets/images/burger.jpg'} alt="burger" />
+                        <Card className="mx-auto shopCard mb-4 border-0">
+                            <CardImg className="rounded-circle" top width="100%" src={process.env.PUBLIC_URL + '/assets/images/burger.jpg'} alt="burger" />
                             <CardBody className="text-center">
                                 <CardTitle tag="h5">
                                     {props.data ? props.data.burger.title : <Spinner color="#574AE2"/>}
