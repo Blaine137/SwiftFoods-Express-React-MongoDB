@@ -12,7 +12,7 @@ const home = (props) => {
         <div className="container w-75 pl-0 pr-0">
             <div className="row mt-4">
                     <div className="col-12 align-items-left">
-                        <p class="h4 mb-4">
+                        <p className="h4 mb-4">
                             <span class="firstWord mr-2">Our</span>
                             special items
                         </p>
@@ -33,7 +33,7 @@ const home = (props) => {
             </div>
         </div>
         <div className="container w-75 pl-0 pr-0">
-            <About data={props.data}/>
+            <About />
         </div>
       </Fragment>
 

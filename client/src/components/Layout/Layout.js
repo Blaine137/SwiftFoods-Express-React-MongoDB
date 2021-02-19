@@ -108,14 +108,6 @@ class Layout extends Component{
                             <Home data={this.state.Data}/>
                         </Route>
 
-                        <Route path="/about">
-                            <About data={this.state.Data}/>
-                        </Route>
-
-                        <Route path="/shop">
-                            <Shop data={this.state.Data}/>
-                        </Route>
-
                         <Route path="/contact">
                             <Contact/>
                         </Route>
