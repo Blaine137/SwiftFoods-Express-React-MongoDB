@@ -61,17 +61,22 @@ class SubscribeForm extends Component {
         }else{
             return(
 
-                <div className="container" id="subscribeForm">
-                    <div className="row">
-                        <div className="col-12">
-                            <h3 className="text-center mt-5 mb-5 align-self-center">Subscribe!</h3>
+                <div className="container w-75 pl-0 pr-0" id="subscribeForm">
+                    <div className="row mt-4">
+                        <div className="col-12 align-items-left">
+                            <p className="h4 mb-4">
+                                <span class="firstWord mr-2">Subscribe</span>
+                            </p>
+                            <p className="h6 mb-2 text-left">
+                                TO TEST PAYMENT USE THIS CARD NUMBER WITH A MONTH/YEAR IN THE FUTURE AND ANY CVC - 4242 4242 4242 4242
+                            </p>
                         </div>
                     </div>
                     <div className="row">
-                            <LocalForm className="mx-auto mb-4 p-4 col-10" onSubmit={this.toggleModal}>
+                            <LocalForm className="mx-auto mb-4 p-4 col-10 w-75" onSubmit={this.toggleModal}>
                                 <Row className="form-group mt-lg-5">
-                                    <Label htmlFor="fName" className="col-form-label" lg={2}>First Name*</Label>
-                                    <Col  lg={4}>
+                                    <Col lg={6}>
+                                        <Label htmlFor="fName" className="col-form-label text-left pl-0" lg={6}>First Name*</Label>
                                         <Control.text
                                             model=".fName" 
                                             className="form-control" 
@@ -96,8 +101,8 @@ class SubscribeForm extends Component {
                                         }}
                                     />
                                     </Col>
-                                    <Label htmlFor="lName" className="col-form-label" lg={2}>Last Name*</Label>
-                                    <Col  lg={4}>
+                                    <Col  lg={6}>
+                                        <Label htmlFor="lName" className="col-form-label pl-0 text-left" lg={6}>Last Name*</Label>
                                         <Control.text 
                                                model=".lName"
                                                className="form-control" 
@@ -122,8 +127,8 @@ class SubscribeForm extends Component {
                                     </Col>
                                 </Row>
                                 <Row className="form-group mt-lg-5">
-                                    <Label htmlFor="email" className="col-form-label" lg={2}>Email*</Label>
-                                    <Col lg={4}>
+                                    <Col lg={6}>
+                                        <Label htmlFor="email" className="col-form-label pl-0 text-left" lg={6}>Email*</Label>
                                         <Control.text
                                                model=".email" 
                                                className="form-control" 
@@ -145,8 +150,8 @@ class SubscribeForm extends Component {
                                                     validEmail: 'Invalid email address'
                                                 }}/>
                                     </Col>
-                                    <Label htmlFor="address" className="col-form-label" lg={2}>Address*</Label>
-                                    <Col lg={4}>
+                                    <Col lg={6}>
+                                        <Label htmlFor="address" className="col-form-label pl-0 text-left" lg={6}>Address*</Label>
                                         <Control.text
                                                model=".address" 
                                                className="form-control" 
@@ -172,8 +177,8 @@ class SubscribeForm extends Component {
                                     </Col>
                                 </Row>
                                 <Row className="form-group mt-lg-5">
-                                    <Label htmlFor="city" className="col-form-label" lg={2}>City*</Label>
-                                    <Col lg={4}>
+                                    <Col lg={6}>
+                                        <Label htmlFor="city" className="col-form-label pl-0 text-left" lg={6}>City*</Label>
                                         <Control.text
                                                model=".city"
                                                className="form-control" 
@@ -197,8 +202,8 @@ class SubscribeForm extends Component {
                                                     maxLength: 'Must be 15 characters or less'
                                                 }}/>
                                     </Col>
-                                    <Label htmlFor="state" className="col-form-label" lg={2}>State*</Label>
-                                    <Col lg={4}>
+                                    <Col lg={6}>
+                                        <Label htmlFor="state" className="col-form-label pl-0 text-left" lg={6}>State*</Label>
                                         <Control.text
                                                model=".state" 
                                                className="form-control" 
@@ -224,8 +229,8 @@ class SubscribeForm extends Component {
                                     </Col>
                                 </Row>
                                 <Row className="form-group mt-lg-5">
-                                    <Label htmlFor="zipcode" className="col-form-label" lg={2}>Zipcode*</Label>
-                                    <Col lg={4}>
+                                    <Col lg={6}>
+                                        <Label htmlFor="zipcode" className="col-form-label pl-0 text-left" lg={6}>Zipcode*</Label>
                                         <Control.text
                                                model=".zipcode" 
                                                className="form-control" 
@@ -251,8 +256,8 @@ class SubscribeForm extends Component {
                                                     isNumber: 'Must be a number'
                                                 }}/>
                                     </Col>
-                                    <Label htmlFor="months" className="col-form-label" lg={2}>Months*</Label>
-                                    <Col lg={4}>
+                                    <Col lg={6}>
+                                        <Label htmlFor="months" className="col-form-label pl-0 text-left" lg={6}>Months*</Label>
                                         <Control.select 
                                                model=".months"
                                                name="months" 
@@ -278,8 +283,8 @@ class SubscribeForm extends Component {
                                     </Col>
                                 </Row>
                                 <Row className="form-group mt-lg-5">
-                                    <Label htmlFor="cardType" className="col-form-label" lg={2}>Card Type*</Label>
-                                    <Col lg={4}>
+                                    <Col lg={6}>
+                                        <Label htmlFor="cardType" className="col-form-label pl-0 text-left" lg={6}>Card Type*</Label>
                                         <Control.select model=".cardType" 
                                                         name="cardType" 
                                                         id="cardType" 
@@ -302,8 +307,8 @@ class SubscribeForm extends Component {
                                                 required: 'Required'
                                             }}/>
                                     </Col>
-                                    <Label htmlFor="cardNum" className="col-form-label" lg={2}>Card Num*</Label>
-                                    <Col lg={4}>
+                                    <Col lg={6}>
+                                        <Label htmlFor="cardNum" className="col-form-label pl-0 text-left" lg={6}>Card Num*</Label>
                                         <Control.password
                                                model=".cardNum" 
                                                className="form-control" 
@@ -330,8 +335,8 @@ class SubscribeForm extends Component {
                                     </Col>
                                 </Row>
                                 <Row className="form-group mt-lg-5">
-                                    <Label htmlFor="expireDate" className="col-form-label" lg={2}>Card Expires*</Label>
-                                    <Col lg={4}>
+                                    <Col lg={6}>
+                                        <Label htmlFor="expireDate" className="col-form-label pl-0 text-left" lg={6}>Card Expires*</Label>
                                         <Control.text
                                                model=".expireDate" 
                                                className="form-control" 
@@ -356,8 +361,8 @@ class SubscribeForm extends Component {
                                                 maxLength: 'Must be 4 numbers or less (month/year)'
                                             }}/>
                                     </Col>
-                                    <Label htmlFor="securityCode" className="col-form-label" lg={2}>SecurityNum*</Label>
-                                    <Col lg={4}>
+                                    <Col lg={6}>
+                                        <Label htmlFor="securityCode" className="col-form-label pl-0 text-left" lg={6}>SecurityNum*</Label>
                                         <Control.password
                                                model=".securityCode" 
                                                className="form-control" 
@@ -384,14 +389,14 @@ class SubscribeForm extends Component {
                                     </Col>
                                 </Row>
                                 <Row className="form-group mt-lg-5">
-                                        <Button className="btn mx-auto submitBtn subBtn" onClick={() => this.toggleModal()}>Submit</Button>
+                                        <Button className="btn mx-auto submitBtn subBtn w-50" onClick={() => this.toggleModal()}>Submit</Button>
                                 </Row>
                             </LocalForm>
                             <Modal isOpen={this.state.showModal} toggle={this.toggleModal}>
                                 <ModalHeader>Thank You For Subscribing!</ModalHeader>
                                 <ModalBody>An member from Swift Foods will review your submittion shortly, expect a response within the next 72 hours. </ModalBody>
                                 <ModalFooter>
-                                    <Button onClick={() => this.toggleModal()}>Close</Button>
+                                    <Button className="submitBtn" onClick={() => this.toggleModal()}>Close</Button>
                                 </ModalFooter>
                             </Modal>
                     </div>

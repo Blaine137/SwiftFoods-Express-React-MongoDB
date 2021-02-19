@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Header from '../Header/Header';
 import Home from '../Home/Home';
-import About from '../About/About';
-import Shop from '../Shop/Shop';
 import Contact from '../Contact/Contact';
 import SubscribeForm from '../SubscribeForm/SubscribeForm';
 import Footer from '../Footer/Footer';

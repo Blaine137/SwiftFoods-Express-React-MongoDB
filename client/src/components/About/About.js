@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import {Spinner} from 'reactstrap';
 import Slide from 'react-reveal/Slide';
 import './About.scss';
 

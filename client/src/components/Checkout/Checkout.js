@@ -115,9 +115,18 @@ const Checkout = (props) => {
 
     return(
         <>
-
+			<div className="row mt-4">
+				<div className="col-12 align-items-left">
+					<p className="h4 mb-4">
+						<span class="firstWord mr-2">Checkout</span>
+					</p>
+					<p className="h6 mb-2 text-left">
+						TO TEST PAYMENT USE THIS CARD NUMBER WITH A MONTH/YEAR IN THE FUTURE AND ANY CVC - 4242 4242 4242 4242
+					</p>
+				</div>
+			</div>
 			<Roll left>
-				<Form className="form mx-auto p-5"  id="payment-form" onSubmit={handleSubmit}>
+				<Form className="form mx-auto p-5 w-75"  id="payment-form" onSubmit={handleSubmit}>
 					{/* Show any error that happens when processing the payment */}
 					{paymentError && (
 						<div className="cardError" role="alert">
@@ -127,7 +136,7 @@ const Checkout = (props) => {
 					{/* Show a success message upon completion */}
 					<p className={succeeded ? "resultMessage" : "resultMessage hidden"}>
 						Payment succeeded, see the result in your
-						<a href={ `https://dashboard.stripe.com/test/payments` }>{ " " }Stripe dashboard</a>
+						<a href={ `https://dashboard.stripe.com/test/payments` }>{ " " }Stripe dashboard{ " " }</a>
 						Refresh the page to pay again.
 					</p>
 					<FormGroup className="mb-5">
@@ -164,14 +173,14 @@ const Checkout = (props) => {
 						{/* Show a success message upon completion */}
 						<p className={succeeded ? "resultMessage" : "resultMessage hidden"}>
 							Payment succeeded, see the result in your
-							<a href={ `https://dashboard.stripe.com/test/payments` }>{ " " }Stripe dashboard</a>
+							<a href={ `https://dashboard.stripe.com/test/payments` }>{ " " }Stripe dashboard{ " " }</a>
 							Refresh the page to pay again.
 						</p>
 					</FormGroup>
 					<FormGroup>
 						<Button
 							type="submit"
-							className={"payBtn w-50 d-block mx-auto "}
+							className={"payBtn w-50 d-block mx-auto w-50"}
 							disabled={processing || disabled || succeeded}
 							id="submit"
 						>

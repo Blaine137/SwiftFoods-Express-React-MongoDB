@@ -10,9 +10,9 @@ const home = (props) => {
 
       <Fragment>
         <div className="container w-75 pl-0 pr-0">
-            <div className="row mt-4">
+            <div className="row mt-5">
                     <div className="col-12 align-items-left">
-                        <p className="h4 mb-4">
+                        <p className="h4 mb-2">
                             <span class="firstWord mr-2">Our</span>
                             special items
                         </p>
@@ -23,9 +23,9 @@ const home = (props) => {
             <Shop data={props.data}/>
         </div>
         <div className="container w-75 pl-0 pr-0">
-            <div className="row mt-4">
+            <div className="row mt-5">
                     <div className="col-12 align-items-left">
-                        <p class="h4 mb-4">
+                        <p class="h4 mb-2">
                             <span class="firstWord mr-2">Why</span>
                             we are the best?
                         </p>

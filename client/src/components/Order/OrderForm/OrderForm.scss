@@ -1,23 +1,21 @@
-form{
-    width: 85%;
+.submitLink{
+  &:hover{
+    text-decoration: none !important;
+  }
 }
 
-.payBtn{
-    background-color: #E2AdF2 !important;
-    color: #222A68 !important;
-    border: none !important;
-    transition: transform .5s ease-in-out;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.payBtn:active, .subscribeBtn:focus, .subscribeBtn:hover{
-    background-color: rgba(226, 173, 242, .6) !important;
-    box-shadow: none !important;
-}
-
-.payBtn:hover{
-    color: white !important;
-    transform: scale(1.1);
+.submitBtn{
+  background-color: rgba(65, 127, 86, 100) !important;
+  color: white !important;
+  transition: transform .5s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 15px !important;
+  &:focus, &:hover{
+      box-shadow: none !important;
+      transform: scale(1.1);
+      background-color: rgba(65, 127, 86, 100) !important;
+      color: white !important;
+  }
 }
 
 .resultMessage {
