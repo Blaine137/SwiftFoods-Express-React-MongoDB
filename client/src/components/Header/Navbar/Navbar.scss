@@ -15,10 +15,11 @@
 }
 
 .navToggler{
-    background-color: rgba(0, 0, 94, 100) !important;
+    background-color: rgba(240, 240, 240, 100) !important;
+    color: red !important;
     &:hover{
         transform: scale(1.1);
-        background-color: rgba(0, 0, 94, 100) !important;
+        background-color: rgba(240, 240, 240, 100) !important;
     }
 }
 

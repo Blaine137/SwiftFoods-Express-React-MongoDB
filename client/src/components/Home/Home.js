@@ -3,13 +3,14 @@ import './Home.scss';
 import Shop from '../Shop/Shop';
 import About from '../About/About';
 
+
 const home = (props) => {
 
   return (
 
       <Fragment>
         <div className="container w-75 pl-0 pr-0">
-            <div className="row">
+            <div className="row mt-4">
                     <div className="col-12 align-items-left">
                         <p class="h4 mb-4">
                             <span class="firstWord mr-2">Our</span>
@@ -22,7 +23,7 @@ const home = (props) => {
             <Shop data={props.data}/>
         </div>
         <div className="container w-75 pl-0 pr-0">
-            <div className="row">
+            <div className="row mt-4">
                     <div className="col-12 align-items-left">
                         <p class="h4 mb-4">
                             <span class="firstWord mr-2">Why</span>

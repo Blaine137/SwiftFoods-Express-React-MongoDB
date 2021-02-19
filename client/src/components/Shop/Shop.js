@@ -14,7 +14,7 @@ const Shop = (props) => {
 
         <Fragment>
             <div className="row mt-2">
-                <div className="col-12 col-md-6 col-lg-4">
+                <div className="col-12 col-md-6 col-lg-4 mt-4">
                     <Zoom left>
                         <Card className="mx-auto mb-4 shopCard border-0">
                             <CardImg className="rounded-circle" top width="100%" src={process.env.PUBLIC_URL + '/assets/images/peppizza.jpg'} alt="pepperoni pizza" />

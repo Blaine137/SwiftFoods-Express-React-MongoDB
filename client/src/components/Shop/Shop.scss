@@ -20,6 +20,7 @@ p{
     font-family: 'Montserrat', sans-serif;
     position: absolute;
     left: 28%;
+    border-radius: 15px !important;
     &:focus, &:hover{
         box-shadow: none !important;
         transform: scale(1.1);

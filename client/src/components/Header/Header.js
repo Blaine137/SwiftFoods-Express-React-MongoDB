@@ -16,7 +16,7 @@ const header = (props) => {
                         <div className="col-xs-12 col-md-7 text-center align-self-center">
                             <p class="h3">Order food anytime and anywhere.</p>
                             <p class="h6">Our delicious food is waiting for you!</p>
-                            <Link className="btn btn-large btn-primary mt-4 subscribe mb-2" data-toggle="#" data-target="#" to="/subscribe">Subscribe</Link>
+                            <Link className="btn btn-large btn-primary mt-2 subscribe mb-2" data-toggle="#" data-target="#" to="/subscribe">Subscribe</Link>
                         </div>
                         <div className="col-xs-12 col-md-5 text-center align-self-center">
                             <img class="img-fluid" src={process.env.PUBLIC_URL + '/assets/images/foodtruck.png'} alt="food truck"/>
