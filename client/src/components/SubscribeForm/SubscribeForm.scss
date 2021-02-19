@@ -3,13 +3,15 @@ h3{
 }
 
 p{
-  color:  #222A68;
+  color:  black;
+}
+
+.react-reveal{
+  min-width: 100% !important;
 }
 
 form{
-    background-color: #574AE2;
-    box-shadow: 2px 2px 6px 6px #AB81CD;
-    border-radius: 2rem;
+    background-color: white;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -20,37 +22,32 @@ form input, form label, form select{
 }
 
 label{
-    color: white;
+    color: black;
 }
 
 input{
     transition: transform .5s ease-in-out;
+    &:focus{
+      transform: scale(1.1);
+    }
 }
 
-input:focus{
-    transform: scale(1.1);
-}
-
-Button{
-  background-color: #E2ADF2 !important;
-  color: #222A68 !important;
-/*   font-family: 'Montserrat', sans-serif; */
+.submitBtn{
+  background-color: rgba(65, 127, 86, 100) !important;
+  color: white !important;
   transition: transform .5s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 15px !important;
+  &:focus, &:hover{
+      box-shadow: none !important;
+      transform: scale(1.1);
+      background-color: rgba(65, 127, 86, 100) !important;
+      color: white !important;
+  }
 }
 
 .form-group{
   margin-bottom: 0 !important;
-}
-
-Button:hover{
-  background-color: rgba(226, 173, 242, .6) !important;
-  color: white !important;
-  transform: scale(1.1);
-}
-
-Button:active, Button:focus{
-  box-shadow: none !important;
-  border: none !important;
 }
 
 .total span{
@@ -64,7 +61,7 @@ Button:active, Button:focus{
 
 .modal-body{
   text-align: center !important;
-  color: #222A68 !important;
+  color: black !important;
 }
 
 .modal-footer Button{

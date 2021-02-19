@@ -1,78 +1,40 @@
 import React, { Fragment } from 'react';
-import {
-  Card, CardImg, CardBody, Spinner
-} from 'reactstrap';
 import './Home.scss';
-import Slide from 'react-reveal/Slide';
+import Shop from '../Shop/Shop';
+import About from '../About/About';
+
 
 const home = (props) => {
 
   return (
 
       <Fragment>
-        <div className="container">
-            <div className="row">
-                    <div className="col-12">
-                        <h3 class="text-center mt-5 mb-5">How We Work!</h3>
+        <div className="container w-75 pl-0 pr-0">
+            <div className="row mt-5">
+                    <div className="col-12 align-items-left">
+                        <p className="h4 mb-2">
+                            <span class="firstWord mr-2">Our</span>
+                            special items
+                        </p>
                     </div>
             </div>
         </div>
-        <div className="container">
-            <div className="row">
-                <div className="col-12 col-md-6 mt-4">
-                    <Slide left>
-                        <Card style={ {width: "18rem"} } className="mx-auto homeCard">
-                            <CardImg top width="100%" src={process.env.PUBLIC_URL + '/assets/images/chooseyourmeal.jpg'} alt="Choose your meal" className="card-img-top" style={ {height: "200px"} }/>
-                            <CardBody>
-                                <h5 className="text-center">
-                                    {props.data ? props.data.home.title1 : <Spinner color="#574AE2"/>}
-                                </h5>
-                            </CardBody>
-                        </Card>
-                    </Slide>
-                </div>
-                <div className="col-12 col-md-6 mt-4">
-                    <Slide right>
-                        <Card style={ {width: "18rem"} } className="mx-auto homeCard">
-                            <CardImg top width="100%" src={process.env.PUBLIC_URL + '/assets/images/wedeliver.jpg'} alt="We deliver" className="card-img-top" style={ {height: "200px"} }/>
-                            <CardBody>
-                                <h5 className="text-center">
-                                    {props.data ? props.data.home.title2 : <Spinner color="#574AE2"/>}
-                                </h5>
-                            </CardBody>
-                        </Card>
-                    </Slide>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col-12 col-md-6 mt-4">
-                    <Slide left>
-                        <Card style={ {width: "18rem"} } className="mx-auto homeCard">
-                            <CardImg top width="100%" src={process.env.PUBLIC_URL + '/assets/images/heatthemup.jpg'} alt="Heat them up" className="card-img-top" style={ {height: "200px"} }/>
-                            <CardBody>
-                                <h5 className="text-center">
-                                    {props.data ? props.data.home.title3 : <Spinner color="#574AE2"/>}
-                                </h5>
-                            </CardBody>
-                        </Card>
-                    </Slide>
-                </div>
-                <div className="col-12 col-md-6 mt-4">
-                    <Slide right>
-                        <Card style={ {width: "18rem"} } className="mx-auto homeCard">
-                            <CardImg top width="100%" src={process.env.PUBLIC_URL + '/assets/images/eatit.jpg'} alt="eat it" className="card-img-top" style={ {height: "200px"} }/>
-                            <CardBody>
-                                <h5 className="text-center">
-                                    {props.data ? props.data.home.title4 : <Spinner color="#574AE2"/>}
-                                </h5>
-                            </CardBody>
-                        </Card>
-                    </Slide>
-                </div>
+        <div className="container w-75 pl-0 pr-0">
+            <Shop data={props.data}/>
+        </div>
+        <div className="container w-75 pl-0 pr-0">
+            <div className="row mt-5">
+                    <div className="col-12 align-items-left">
+                        <p class="h4 mb-2">
+                            <span class="firstWord mr-2">Why</span>
+                            we are the best?
+                        </p>
+                    </div>
             </div>
         </div>
-        
-        
+        <div className="container w-75 pl-0 pr-0">
+            <About />
+        </div>
       </Fragment>
 
   );

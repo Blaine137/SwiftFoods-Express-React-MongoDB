@@ -1,0 +1,17 @@
+.payBtn{
+    background-color: rgba(65, 127, 86, 100) !important;
+    color: white !important;
+    transition: transform .5s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 15px !important;
+    &:focus, &:hover{
+        box-shadow: none !important;
+        transform: scale(1.1);
+        background-color: rgba(65, 127, 86, 100) !important;
+        color: white !important;
+    }
+}
+
+.resultMessage a{
+    color: black !important;
+}

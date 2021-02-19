@@ -1,34 +1,37 @@
+$secondary: rgba(240, 240, 240, 100);
+
 .navbar{
-    background-color: #574AE2 !important;
     font-family: 'Montserrat', sans-serif;
 }
 
 .nav-item a{
-    color: rgba(255, 255, 255, .6);
+    color: rgba(80, 82, 78, 100);
 }
 
 .nav-item a:hover{
-    color: rgba(255, 255, 255, .6);
+    color: grey;
 }
 
 .active-link{
-    color: white !important;
+    color: red i !important;
 }
 
-.cart{
-    
-    color: #E1ACF1 !important;
+.navToggler{
+    background-color: rgba(240, 240, 240, 100) !important;
+    color: red !important;
+    &:hover{
+        transform: scale(1.1);
+        background-color: rgba(240, 240, 240, 100) !important;
+    }
+}
+
+.loginBtn{
+    color: rgba(80, 82, 78, 100) !important;
+    background-color: rgba(240, 240, 240, 100) !important;
     border: none !important;
-    transition: transform .5s ease-in-out;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.cart:active, .cart:focus, .cart:hover{
-    
-    box-shadow: none !important;
-}
-
-.cart:hover{
-    color: white !important;
-    transform: scale(1.1);
+    &:hover{
+        color: rgba(80, 82, 78, 100) !important;
+        background-color: rgba(240, 240, 240, 100) !important;
+        transform: scale(1.1);
+    }
 }

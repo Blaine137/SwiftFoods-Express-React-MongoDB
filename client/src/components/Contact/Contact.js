@@ -24,20 +24,23 @@ const Contact = (props) => {
     return(
 
         <Fragment>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h3 class="text-center mt-5 mb-5">Contact Us!</h3>
-                    </div>
+            <div className="container w-75 pl-0 pr-0">
+                <div className="row mt-5">
+                        <div className="col-12 align-items-left">
+                            <p className="h4 mb-2">
+                                <span class="firstWord mr-2">Contact</span>
+                                us
+                            </p>
+                        </div>
                 </div>
             </div>
-            <div className="container">
+            <div className="container w-75">
                 <div className="row">
                     <Roll left>
                         <LocalForm className="mx-auto mb-5 p-4 col-10" onSubmit={handleSubmit} >
                             <Row className="form-group">
-                                <Label htmlFor="fName" className="col-form-label" lg={2}>First Name*</Label>
-                                <Col  lg={4}>
+                                <Col  lg={6}>
+                                    <Label htmlFor="fName" className="col-form-label pl-0 text-left" lg={6}>First Name*</Label>
                                     <Control.text
                                         model=".fName" 
                                         className="form-control" 
@@ -62,8 +65,8 @@ const Contact = (props) => {
                                     }}
                                     />
                                 </Col>
-                                <Label htmlFor="lName" className="col-form-label" lg={2}>Last Name*</Label>
-                                <Col  lg={4}>
+                                <Col  lg={6}>
+                                    <Label htmlFor="lName" className="col-form-label pl-0 text-left" lg={6}>Last Name*</Label>
                                     <Control.text 
                                             model=".lName"
                                             className="form-control" 
@@ -88,8 +91,8 @@ const Contact = (props) => {
                                 </Col>
                             </Row>
                             <Row className="form-group">
-                                <Label htmlFor="email" className="col-form-label" lg={2}>Email*</Label>
-                                <Col lg={4}>
+                                <Col lg={6}>
+                                    <Label htmlFor="email" className="col-form-label pl-0 text-left" lg={6}>Email*</Label>
                                     <Control.text
                                             model=".email" 
                                             className="form-control" 
@@ -111,8 +114,8 @@ const Contact = (props) => {
                                                 validEmail: 'Invalid email address'
                                             }}/>
                                 </Col>
-                                <Label htmlFor="phoneNum" className="col-form-label" lg={2}>Phone Num*</Label>
-                                <Col lg={4}>
+                                <Col lg={6}>
+                                    <Label htmlFor="phoneNum" className="col-form-label pl-0 text-left" lg={6}>Phone Num*</Label>
                                     <Control.text
                                             model=".phoneNum" 
                                             className="form-control" 
@@ -134,8 +137,8 @@ const Contact = (props) => {
                                                 isNumber: 'Must be a number'
                                             }}/>
                                 </Col>
-                                <Label htmlFor="comments" className="col-form-label" lg={2}>comments*</Label>
                                 <Col>
+                                    <Label htmlFor="comments" className="col-form-label pl-0 text-left" lg={2}>comments*</Label>
                                     <Control.textarea
                                             model=".comments" 
                                             className="form-control w-100" 
@@ -158,7 +161,7 @@ const Contact = (props) => {
                                 </Col>
                             </Row>
                             <Row className="form-group mt-4">
-                                <Button className="btn mx-auto submitBtn subBtn" onClick={() => toggleModal(!showModal)}>Submit</Button>
+                                <Button className="btn mx-auto submitBtn subBtn w-50" onClick={() => toggleModal(!showModal)}>Submit</Button>
                             </Row>
                         </LocalForm>
                     </Roll>
@@ -166,7 +169,7 @@ const Contact = (props) => {
                         <ModalHeader>Thank You For Contacting Us!</ModalHeader>
                         <ModalBody>An member from Swift Foods will review your submittion shortly, expect a response within the next 72 hours. </ModalBody>
                         <ModalFooter>
-                            <Button onClick={() => toggleModal(!showModal)}>Close</Button>
+                            <Button onClick={() => toggleModal(!showModal)} className="submitBtn">Close</Button>
                         </ModalFooter>
                     </Modal>
                 </div>

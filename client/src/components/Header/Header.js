@@ -9,23 +9,21 @@ const header = (props) => {
     return(
 
         <Fragment>
-            <header className="jumbotron jumbotron-fluid mb-0">
+            <Navigation toggleModal={props.toggleModal} logout={props.logout} loginUser={props.loginUser} toggleLogin={props.toggleLogin} loggedIn={props.loggedIn}/>
+            <header className="jumbotron ml-auto mr-auto mb-4 mt-2 w-75">
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-4 col-sm-3 col-md-2 align-self-center">
-                            <Link to="/"><img src={process.env.PUBLIC_URL + '/assets/images/swiftfoodslogodcolor.png'} alt="" className="image-fluid img-thumbnail headerLogo scale-in-center"/></Link>
+                        <div className="col-xs-12 col-md-7 text-center align-self-center">
+                            <p class="h3">Order food anytime and anywhere.</p>
+                            <p class="h6">Our delicious food is waiting for you!</p>
+                            <Link className="btn btn-large btn-primary mt-2 subscribe mb-2" data-toggle="#" data-target="#" to="/subscribe">Subscribe</Link>
                         </div>
-                        <div className="col">
-                            <h1 className="slide-in-left">Swift Foods</h1>
-                            <h2 className="slide-in-right">a better way to eat!</h2>
-                        </div>
-                        <div className="col-md-2 col-xl-2 col-sm-3 text-center ">
-                            <Link className="btn btn-large btn-primary mt-4 subscribeBtn slide-in-top" data-toggle="#" data-target="#" to="/subscribe">Subscribe</Link>
+                        <div className="col-xs-12 col-md-5 text-center align-self-center">
+                            <img class="img-fluid" src={process.env.PUBLIC_URL + '/assets/images/foodtruck.png'} alt="food truck"/>
                         </div>
                     </div>
                 </div>
             </header>
-            <Navigation toggleModal={props.toggleModal} logout={props.logout} loginUser={props.loginUser} toggleLogin={props.toggleLogin} loggedIn={props.loggedIn}/>
         </Fragment>
 
     );

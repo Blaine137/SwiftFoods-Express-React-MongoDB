@@ -1,64 +1,31 @@
 import React, { Fragment } from 'react';
-import {Spinner} from 'reactstrap';
 import Slide from 'react-reveal/Slide';
 import './About.scss';
 
 const About = (props) => {
         return(
             <Fragment>
-                     <div class="container">
-                        <div class="row">
-                                <div class="col-12">
-                                    <h3 class="text-center mt-5 mb-5">About Us!</h3>
-                                </div>
-                        </div>
-                    </div>
                     <div class="container">
-                        <div class="row row-content align-items-center">
-                            <div class="col-6 ">
+                        <div class="row row-content align-items-start mt-4">
+                            <div class="col-12 col-md-6 ">
                                 <Slide top>
-                                    <h4 class="font-weight-bold">
-                                        {props.data ? props.data.about.title1 : <Spinner color="#574AE2"/> }
-                                    </h4>
-                                </Slide>
-                            </div>
-                            <div class="col text-left ">
-                                <Slide bottom>
-                                    <p class="w-55 ml-auto">
-                                        {props.data ? props.data.about.p1 : <Spinner color="#574AE2"/> }
+                                    <p className="mb-4 reason">
+                                        You get to choose your meal.
+                                    </p>
+                                    <p className="mb-4 reason">
+                                        We deliver to your house.
+                                    </p>
+                                    <p className="mb-4 reason">
+                                        All you have to do is heat them up.
+                                    </p>
+                                    <p className="mb-4 reason">
+                                        Eat food that is healthy for you.
                                     </p>
                                 </Slide>
                             </div>
-                        </div>
-                        <div class="row row-content align-items-center">
-                            <div class="col text-left">
-                                <Slide top>
-                                    <p class="w-55 mr-auto">
-                                        {props.data ? props.data.about.p2 : <Spinner color="#574AE2"/> }
-                                    </p>
-                                </Slide>
-                            </div>
-                            <div class="col-6 text-right">
+                            <div class="col-12 col-md-6 text-lg-right text-xs-center ">
                                 <Slide bottom>
-                                    <h4 class="font-weight-bold">
-                                        {props.data ? props.data.about.title2 : <Spinner color="#574AE2"/> }
-                                    </h4>
-                                </Slide>
-                            </div>
-                        </div>
-                        <div class="row row-content align-items-center">
-                            <div class="col-6">
-                                <Slide top>
-                                    <h4 class="font-weight-bold">
-                                        {props.data ? props.data.about.title3 : <Spinner color="#574AE2"/> }
-                                    </h4>
-                                </Slide>
-                            </div>
-                            <div class="col text-left">
-                                <Slide bottom>
-                                    <p class=" w-55 ml-auto ">
-                                        {props.data ? props.data.about.p3 : <Spinner color="#574AE2"/> }
-                                    </p>
+                                    <img className="img-fluid" src={process.env.PUBLIC_URL + '/assets/images/fooddata.png'} alt="food truck"/>
                                 </Slide>
                             </div>
                         </div>
