@@ -131,7 +131,7 @@ class Layout extends Component{
                         <ModalBody>
                             <Form className="my-auto pt-2 mx-auto">
                                 <FormGroup row>
-                                        <Label for="username" lg={4} xs={12} md={4}>Username:</Label>
+                                        <Label for="username pl-0 text-left" lg={4} xs={12} md={4}>Username:</Label>
                                         <Col  md={6} xs={{
                                             size: 10,
                                             offset: 1
@@ -154,11 +154,11 @@ class Layout extends Component{
                             <Button onClick={() => {
                                 this.toggleModal();
                                 this.loginUser();
-                            }}>Login</Button>
+                            }} className="submitBtn">Login</Button>
                             <Button onClick={() => {
                                 this.toggleModal();
                                 this.registerUser();
-                            }}>Register</Button>
+                            }} className="submitBtn">Register</Button>
                         </ModalFooter>
                     </Modal>
                 

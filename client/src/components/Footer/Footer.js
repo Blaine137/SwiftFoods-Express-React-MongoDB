@@ -18,10 +18,7 @@ const footer = (props) => {
                                     <NavLink exact to="/" activeClassName="active-footer-link">Home</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/about" activeClassName="active-footer-link">About Us</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/shop" activeClassName="active-footer-link">Shop</NavLink>
+                                    <NavLink to="/order" activeClassName="active-footer-link">Order</NavLink>
                                 </li>
                                 <li>
                                     <NavLink exact to="/contact" activeClassName="active-footer-link">Contact</NavLink>
