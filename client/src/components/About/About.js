@@ -6,13 +6,6 @@ import './About.scss';
 const About = (props) => {
         return(
             <Fragment>
-                     <div class="container">
-                        <div class="row">
-                                <div class="col-12">
-                                    <h3 class="text-center mt-5 mb-5">About Us!</h3>
-                                </div>
-                        </div>
-                    </div>
                     <div class="container">
                         <div class="row row-content align-items-center">
                             <div class="col-6 ">
