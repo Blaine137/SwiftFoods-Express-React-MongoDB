@@ -52,7 +52,7 @@ class SubscribeForm extends Component {
            
             return(
                 <div className="container">
-                    <h3 className="text-center mt-5 mb-5 align-self-center">Thank you for subscribing!</h3>
+                    <h3 className="text-center mb-5 text-left">Thank you for subscribing!</h3>
                     <p className="text-left">Dear {this.props.user}, </p>
                     <p className="text-left pl-5">thank you so much for subscribing!</p>
                     <p className="text-left pl-5">We have sent an email to you, please check your spam folder if it cannot be found.</p>
