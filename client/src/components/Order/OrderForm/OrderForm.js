@@ -72,7 +72,7 @@ export default function OrderForm(props) {
 					<Link to="/checkout" className="submitLink">
 						<Button
 							type="submit"
-							className="submitBtn w-50 d-block mx-auto w-50"
+							className="submitBtn w-50 d-block mx-auto w-75"
 							id="submit"
 							onClick={() => {
 								props.setShowCheckout(true);
