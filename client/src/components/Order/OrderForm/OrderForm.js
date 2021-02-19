@@ -49,9 +49,9 @@ export default function OrderForm(props) {
 
 	return (
 		<>
-			<div className="row mt-4">
+			<div className="row mt-5">
 				<div className="col-12 align-items-left">
-					<p className="h4 mb-4">
+					<p className="h4 mb-2">
 						<span class="firstWord mr-2">Order</span>
 					</p>
 				</div>
