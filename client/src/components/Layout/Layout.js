@@ -161,9 +161,6 @@ class Layout extends Component{
                             }} className="submitBtn">Register</Button>
                         </ModalFooter>
                     </Modal>
-                
-              
-
                 <Footer/>
             </Fragment>
 
