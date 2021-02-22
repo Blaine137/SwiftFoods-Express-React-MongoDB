@@ -39,7 +39,7 @@ const Shop = (props) => {
                 </div>
                 <div className="col-12 col-md-6 col-lg-4">
                     <Zoom clear>
-                        <Card className="mx-auto shopCard mb-4 border-0 ">
+                        <Card className="mx-auto shopCard mb-4 border-0 mt-4 mt-md-0">
                             <CardImg className="rounded-circle" top width="100%" src={process.env.PUBLIC_URL + '/assets/images/salad.jpg'} alt="salad" />
                             <CardBody className="text-center">
                                 <CardTitle tag="h5">
@@ -62,7 +62,7 @@ const Shop = (props) => {
                 </div>
                 <div className="col-12 col-md-6-offset-2 col-lg-4">
                     <Zoom right>
-                        <Card className="mx-auto shopCard mb-4 border-0">
+                        <Card className="mx-auto shopCard mb-4 border-0 mt-4 mt-md-0">
                             <CardImg className="rounded-circle" top width="100%" src={process.env.PUBLIC_URL + '/assets/images/burger.jpg'} alt="burger" />
                             <CardBody className="text-center">
                                 <CardTitle tag="h5">

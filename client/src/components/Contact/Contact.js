@@ -161,7 +161,7 @@ const Contact = (props) => {
                                 </Col>
                             </Row>
                             <Row className="form-group mt-4">
-                                <Button className="btn mx-auto submitBtn subBtn w-50" onClick={() => toggleModal(!showModal)}>Submit</Button>
+                                <Button className="btn mx-auto submitBtn w-50" onClick={() => toggleModal(!showModal)}>Submit</Button>
                             </Row>
                         </LocalForm>
                     </Roll>
