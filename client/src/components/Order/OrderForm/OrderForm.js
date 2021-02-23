@@ -57,7 +57,7 @@ export default function OrderForm(props) {
 				</div>
 			</div>
 			<Roll left>
-				<Form className="form mx-auto p-5 w-75"  id="payment-form" onSubmit={(e) => {e.preventDefault()}}>
+				<Form className="form mx-auto p-0 p-md-5 w-75"  id="payment-form" onSubmit={(e) => {e.preventDefault()}}>
 					<FormGroup className="mb-5">
 						<Label className="mt-4"  for="pizzas" > Pizzas*</Label>
 						<Input className="form-control mb-4" type="text" name="pizzas" id="pizzas" maxLength="60" required invalid={errors.pizzas} onBlur={HandleBlur} />

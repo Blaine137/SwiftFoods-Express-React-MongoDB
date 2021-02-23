@@ -126,7 +126,7 @@ const Checkout = (props) => {
 				</div>
 			</div>
 			<Roll left>
-				<Form className="form mx-auto p-5 w-75"  id="payment-form" onSubmit={handleSubmit}>
+				<Form className="form mx-auto p-0 p-md-5 w-75"  id="payment-form" onSubmit={handleSubmit}>
 					{/* Show any error that happens when processing the payment */}
 					{paymentError && (
 						<div className="cardError" role="alert">
