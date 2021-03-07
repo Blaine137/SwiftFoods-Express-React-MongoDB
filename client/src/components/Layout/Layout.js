@@ -5,6 +5,7 @@ import Contact from '../Contact/Contact';
 import SubscribeForm from '../SubscribeForm/SubscribeForm';
 import Footer from '../Footer/Footer';
 import Order from '../Order/Order';
+import Cart from '../Cart/Cart';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import {
   Modal, 
@@ -28,7 +29,7 @@ class Layout extends Component{
         showModal: false,
         username: null,
         password: null,
-        loggedIn: false
+        loggedIn: false,
     };
 
     componentDidMount(){
@@ -97,9 +98,6 @@ class Layout extends Component{
 
             <Fragment>
                 <Header toggleModal={this.toggleModal} logout={this.logoutUser} toggleLogin={this.toggleLogin} loginUser={this.loginUser} loggedIn={this.state.loggedIn}/>
-                
-            
-                
                     <Switch>
                     
                         <Route exact path="/">
@@ -116,6 +114,10 @@ class Layout extends Component{
 
                         <Route path="/checkout">
                             <Order/>
+                        </Route>
+
+                        <Route path="/cart">
+                            <Cart/>
                         </Route>
 
                         <Route path="/subscribe">

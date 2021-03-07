@@ -28,11 +28,9 @@ const Shop = (props) => {
                                 <CardText>
                                     {props.data ? props.data.pizza.price.$numberDecimal : <Spinner color="#574AE2"/>}
                                 </CardText>
-                                <Link to="/order">
-                                    <Button className="orderBtn">
-                                        Order Now
-                                    </Button>
-                                </Link>
+                                <Button className="orderBtn">
+                                    Add to cart
+                                </Button>
                             </CardBody>
                         </Card>
                     </Zoom>
@@ -51,11 +49,9 @@ const Shop = (props) => {
                                 <CardText >
                                     {props.data ? props.data.salad.price.$numberDecimal : <Spinner color="#574AE2"/>}
                                 </CardText>
-                                <Link to="/order">
-                                    <Button className="orderBtn">
-                                        Order Now
-                                    </Button>
-                                </Link>
+                                <Button className="orderBtn">
+                                    Add to cart
+                                </Button>
                             </CardBody>
                         </Card>
                     </Zoom>
@@ -74,11 +70,9 @@ const Shop = (props) => {
                                 <CardText >
                                     {props.data ? props.data.burger.price.$numberDecimal : <Spinner color="#574AE2"/>}
                                 </CardText>
-                                <Link to="/order">
-                                    <Button className="orderBtn">
-                                        Order Now
-                                    </Button>
-                                </Link>
+                                <Button className="orderBtn">
+                                    Add to cart
+                                </Button>
                             </CardBody>
                         </Card>
                     </Zoom>

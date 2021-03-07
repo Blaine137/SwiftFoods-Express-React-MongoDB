@@ -8,6 +8,8 @@ import {
   Button
 } from 'reactstrap';
 import {NavLink} from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import './Navbar.scss';
 
 
@@ -29,6 +31,11 @@ const Navigation = (props) => {
             </NavItem>
             <NavItem className="mr-3 mt-2 mb-2 my-md-auto">
                 <NavLink to="/contact" activeClassName="active-link">Contact</NavLink>
+            </NavItem>
+            <NavItem className="mr-3 mt-2 mb-2 my-md-auto">
+              <NavLink to="/cart">
+                <FontAwesomeIcon icon={faShoppingCart}/>
+              </NavLink>
             </NavItem>
             <Button className="btn-secondary loginBtn h-60 w-25 w-md-auto" 
             onClick={() => {
