@@ -30,6 +30,11 @@ class Layout extends Component{
         username: null,
         password: null,
         loggedIn: false,
+        formValues: {
+            pizzas: 0,
+            salads: 0,
+            burgers: 0
+        }
     };
 
     componentDidMount(){
@@ -42,6 +47,16 @@ class Layout extends Component{
         return body;
         
     }
+ 
+	HandleBlur = (food, number) => {
+		if(food === "pizza"){
+            this.setState({ ...this.state.formValues, ...{ pizzas: number + this.state.formValues.pizzas } });
+        } else if(food === "salads"){
+            this.setState({ ...this.state.formValues, ...{ salads: number + this.state.formValues.salads } });
+        } else if(food === "burgers"){
+            this.setState({ ...this.state.formValues, ...{ burgers: number + this.state.formValues.burgers } });
+        }
+	};
 
     toggleModal = () => {
         this.setState({showModal: !this.state.showModal})
@@ -101,7 +116,7 @@ class Layout extends Component{
                     <Switch>
                     
                         <Route exact path="/">
-                            <Home data={this.state.Data}/>
+                            <Home data={this.state.Data} HandleBlur={this.HandleBlur}/>
                         </Route>
 
                         <Route path="/contact">
@@ -109,15 +124,15 @@ class Layout extends Component{
                         </Route>
 
                         <Route path="/order">
-                            <Order/>
+                            <Order formValues={this.state.formValues} HandleBlur={this.HandleBlur} />
                         </Route>
 
                         <Route path="/checkout">
-                            <Order/>
+                            <Order formValues={this.state.formValues} HandleBlur={this.HandleBlur} />
                         </Route>
 
                         <Route path="/cart">
-                            <Cart/>
+                            <Cart formValues={this.state.formValues}/>
                         </Route>
 
                         <Route path="/subscribe">

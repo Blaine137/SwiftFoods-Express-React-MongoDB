@@ -36,17 +36,6 @@ export default function OrderForm(props) {
 		return true;
 	};
 
-        //handleChange 
-	const HandleBlur = event => {
-		let target = event.target;
-		//if stripe card input use stripe element error handling else use our error handling
-		if(validateInput(target)) {
-			props.setFormValues({ ...props.formValues, ...{ [target.name]: target.value } });
-		}
-	};
-
-	
-
 	return (
 		<>
 			<div className="row mt-5">
@@ -60,13 +49,13 @@ export default function OrderForm(props) {
 				<Form className="form mx-auto p-0 p-md-5 w-75"  id="payment-form" onSubmit={(e) => {e.preventDefault()}}>
 					<FormGroup className="mb-5">
 						<Label className="mt-4"  for="pizzas" > Pizzas*</Label>
-						<Input className="form-control mb-4" type="text" name="pizzas" id="pizzas" maxLength="60" required invalid={errors.pizzas} onBlur={HandleBlur} />
+						<Input className="form-control mb-4" type="text" name="pizzas" id="pizzas" maxLength="60" required invalid={errors.pizzas} onBlur={props.HandleBlur} />
 						<FormFeedback className="feedback">{errors.pizzas}</FormFeedback>
 						<Label className="mt-4"  for="salads" > Salads*</Label>
-						<Input className="form-control mb-4" type="text" name="salads" id="salads" maxLength="60" required invalid={errors.salads} onBlur={HandleBlur} />
+						<Input className="form-control mb-4" type="text" name="salads" id="salads" maxLength="60" required invalid={errors.salads} onBlur={props.HandleBlur} />
 						<FormFeedback className="feedback">{errors.salads}</FormFeedback>
 						<Label className="mt-4"  for="salads" > Burgers*</Label>
-						<Input className="form-control mb-4" type="text" name="burgers" id="burgers" maxLength="60" required invalid={errors.burgers} onBlur={HandleBlur} />
+						<Input className="form-control mb-4" type="text" name="burgers" id="burgers" maxLength="60" required invalid={errors.burgers} onBlur={props.HandleBlur} />
 						<FormFeedback className="feedback">{errors.burgers}</FormFeedback>
 					</FormGroup>
 					<Link to="/checkout" className="submitLink">
