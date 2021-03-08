@@ -49,14 +49,33 @@ class Layout extends Component{
     }
  
 	HandleBlur = (food, number) => {
+        
 		if(food === "pizza"){
-            this.setState({ ...this.state.formValues, ...{ pizzas: number + this.state.formValues.pizzas } });
+            this.setState((prevState, props) => ({
+                ...prevState,
+                formValues: {
+                    ...prevState.formValues,
+                    pizzas: prevState.formValues.pizzas + number
+                }
+            }));
         } else if(food === "salads"){
-            this.setState({ ...this.state.formValues, ...{ salads: number + this.state.formValues.salads } });
+            this.setState((prevState, props) => ({
+                ...prevState,
+                formValues: {
+                    ...prevState.formValues,
+                    salads: prevState.formValues.salads + number
+                }
+            }));
         } else if(food === "burgers"){
-            this.setState({ ...this.state.formValues, ...{ burgers: number + this.state.formValues.burgers } });
+            this.setState((prevState, props) => ({
+                ...prevState,
+                formValues: {
+                    ...prevState.formValues,
+                    burgers: prevState.formValues.burgers + number
+                }
+            }));
         }
-	};
+	}
 
     toggleModal = () => {
         this.setState({showModal: !this.state.showModal})
@@ -107,7 +126,6 @@ class Layout extends Component{
     }
 
     render(){
-
         
         return(
 

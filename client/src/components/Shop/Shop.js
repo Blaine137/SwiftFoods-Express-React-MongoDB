@@ -28,7 +28,7 @@ const Shop = (props) => {
                                     {props.data ? props.data.pizza.price.$numberDecimal : <Spinner color="#574AE2"/>}
                                 </CardText>
                                 <Button className="orderBtn"
-                                        onClick={() => props.HandleBlur("pizzas", 1)}>
+                                        onClick={() => props.HandleBlur("pizza", 1)}>
                                     Add to cart
                                 </Button>
                             </CardBody>
