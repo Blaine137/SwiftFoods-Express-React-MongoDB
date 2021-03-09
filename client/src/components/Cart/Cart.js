@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
-import {Media} from 'reactstrap';
+import {Media, Button} from 'reactstrap';
+import {Link} from 'react-router-dom';
 import './Cart.scss';
 
 
@@ -40,6 +41,11 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                         onClick={() => addToCart("pizza", 1)}
                     />
                 </p>
+                <Link to="/checkout">
+                    <Button className="orderBtn d-block">
+                        Checkout
+                    </Button>
+                </Link>
             </div>
         </>
     );
