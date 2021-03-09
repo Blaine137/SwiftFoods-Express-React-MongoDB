@@ -19,7 +19,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                         </div>
                 </div>
             </div>
-            <div className="container w-75 pl-0 pr-0">
+            <div className="container w-75 pl-0 pr-0 mt-2 mb-2">
                 <p className="d-inline-flex align-items-center">
                     <FontAwesomeIcon 
                         icon={faMinus} 
@@ -31,7 +31,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                             object 
                             src={process.env.PUBLIC_URL + '/assets/images/peppizza.jpg'} 
                             alt="pizza img" 
-                            className="d-inline rounded-circle mr-3" 
+                            className="d-inline rounded-circle mr-3 cartImg" 
                         />
                         {formValues.pizzas} 
                     <FontAwesomeIcon 
@@ -42,7 +42,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                     />
                 </p>
                 <Link to="/checkout">
-                    <Button className="orderBtn d-block">
+                    <Button className="orderBtn d-block mr-auto">
                         Checkout
                     </Button>
                 </Link>

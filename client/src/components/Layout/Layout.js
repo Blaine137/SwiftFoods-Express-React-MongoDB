@@ -163,7 +163,7 @@ class Layout extends Component{
                     <Switch>
                     
                         <Route exact path="/">
-                            <Home data={this.state.Data} HandleBlur={this.HandleBlur}/>
+                            <Home data={this.state.Data} addToCart={this.addToCart}/>
                         </Route>
 
                         <Route path="/contact">

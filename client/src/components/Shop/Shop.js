@@ -28,7 +28,7 @@ const Shop = (props) => {
                                     {props.data ? props.data.pizza.price.$numberDecimal : <Spinner color="#574AE2"/>}
                                 </CardText>
                                 <Button className="orderBtn"
-                                        onClick={() => props.HandleBlur("pizza", 1)}>
+                                        onClick={() => props.addToCart("pizza", 1)}>
                                     Add to cart
                                 </Button>
                             </CardBody>
@@ -50,7 +50,7 @@ const Shop = (props) => {
                                     {props.data ? props.data.salad.price.$numberDecimal : <Spinner color="#574AE2"/>}
                                 </CardText>
                                 <Button className="orderBtn"
-                                        onClick={() => props.HandleBlur("salads", 1)}>
+                                        onClick={() => props.addToCart("salads", 1)}>
                                     Add to cart
                                 </Button>
                             </CardBody>
@@ -72,7 +72,7 @@ const Shop = (props) => {
                                     {props.data ? props.data.burger.price.$numberDecimal : <Spinner color="#574AE2"/>}
                                 </CardText>
                                 <Button className="orderBtn"
-                                        onClick={() => props.HandleBlur("burgers", 1)}>
+                                        onClick={() => props.addToCart("burgers", 1)}>
                                     Add to cart
                                 </Button>
                             </CardBody>

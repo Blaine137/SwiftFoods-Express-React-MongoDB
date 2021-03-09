@@ -20,7 +20,7 @@ const home = (props) => {
             </div>
         </div>
         <div className="container w-75 pl-0 pr-0">
-            <Shop data={props.data} HandleBlur={props.HandleBlur}/>
+            <Shop data={props.data} addToCart={props.addToCart}/>
         </div>
         <div className="container w-75 pl-0 pr-0">
             <div className="row mt-5">
