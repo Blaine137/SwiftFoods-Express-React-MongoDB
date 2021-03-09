@@ -16,8 +16,6 @@ svg{
     color: white !important;
     transition: transform .5s ease-in-out;
     font-family: 'Montserrat', sans-serif;
-    position: absolute;
-    left: 28%;
     border-radius: 15px !important;
     &:focus, &:hover{
         box-shadow: none !important;

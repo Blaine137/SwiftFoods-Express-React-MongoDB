@@ -9,7 +9,7 @@ import './Cart.scss';
 const Cart = ({formValues, addToCart, removeFromCart}) => {
 
     return(
-        <>
+        <div className="h-75">
             <div className="container w-75 pl-0 pr-0">
                 <div className="row mt-5">
                         <div className="col-12 align-items-left">
@@ -20,7 +20,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                 </div>
             </div>
             <div className="container w-75 pl-0 pr-0 mt-2 mb-2">
-                <div className="row align-self-center">
+                <div className="row align-items-center">
                     <div className="col-12">
                         <p className=" my-auto">
                             <FontAwesomeIcon 
@@ -100,7 +100,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                     </div>
                 </div>
             </div>
-            <div className="container w-75 pl-0 pr-0 mt-2 mb-2">
+            <div className="container w-75 pl-0 pr-0 mt-2 mb-4">
                 <div className="row align-self-start">
                     <div className="col-12">
                         <Link to="/checkout" className="mr-auto">
@@ -111,7 +111,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 
 };

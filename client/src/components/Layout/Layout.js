@@ -58,7 +58,7 @@ class Layout extends Component{
                     pizzas: prevState.formValues.pizzas + number
                 }
             }));
-        } else if(food === "salads"){
+        } else if(food === "salad"){
             this.setState((prevState, props) => ({
                 ...prevState,
                 formValues: {
@@ -66,7 +66,7 @@ class Layout extends Component{
                     salads: prevState.formValues.salads + number
                 }
             }));
-        } else if(food === "burgers"){
+        } else if(food === "burger"){
             this.setState((prevState, props) => ({
                 ...prevState,
                 formValues: {
@@ -87,7 +87,7 @@ class Layout extends Component{
                     pizzas: prevState.formValues.pizzas - number
                 }
             }));
-        } else if(food === "salads"){
+        } else if(food === "salad"){
             this.setState((prevState) => ({
                 ...prevState,
                 formValues: {
@@ -95,7 +95,7 @@ class Layout extends Component{
                     salads: prevState.formValues.salads - number
                 }
             }));
-        } else if(food === "burgers"){
+        } else if(food === "burger"){
             this.setState((prevState) => ({
                 ...prevState,
                 formValues: {
