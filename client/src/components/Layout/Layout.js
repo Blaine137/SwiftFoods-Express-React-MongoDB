@@ -48,7 +48,7 @@ class Layout extends Component{
         
     }
  
-	HandleBlur = (food, number) => {
+	addToCart = (food, number) => {
         
 		if(food === "pizza"){
             this.setState((prevState, props) => ({
@@ -72,6 +72,35 @@ class Layout extends Component{
                 formValues: {
                     ...prevState.formValues,
                     burgers: prevState.formValues.burgers + number
+                }
+            }));
+        }
+	}
+
+    removeFromCart = (food, number) => {
+        
+		if(food === "pizza"){
+            this.setState((prevState) => ({
+                ...prevState,
+                formValues: {
+                    ...prevState.formValues,
+                    pizzas: prevState.formValues.pizzas - number
+                }
+            }));
+        } else if(food === "salads"){
+            this.setState((prevState) => ({
+                ...prevState,
+                formValues: {
+                    ...prevState.formValues,
+                    salads: prevState.formValues.salads - number
+                }
+            }));
+        } else if(food === "burgers"){
+            this.setState((prevState) => ({
+                ...prevState,
+                formValues: {
+                    ...prevState.formValues,
+                    burgers: prevState.formValues.burgers - number
                 }
             }));
         }
@@ -142,15 +171,15 @@ class Layout extends Component{
                         </Route>
 
                         <Route path="/order">
-                            <Order formValues={this.state.formValues} HandleBlur={this.HandleBlur} />
+                            <Order formValues={this.state.formValues} HandleBlur={this.addToCart} />
                         </Route>
 
                         <Route path="/checkout">
-                            <Order formValues={this.state.formValues} HandleBlur={this.HandleBlur} />
+                            <Order formValues={this.state.formValues} HandleBlur={this.addToCart} />
                         </Route>
 
                         <Route path="/cart">
-                            <Cart formValues={this.state.formValues}/>
+                            <Cart formValues={this.state.formValues} addToCart={this.addToCart} removeFromCart={this.removeFromCart}/>
                         </Route>
 
                         <Route path="/subscribe">

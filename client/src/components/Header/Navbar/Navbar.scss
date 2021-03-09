@@ -6,10 +6,9 @@ $secondary: rgba(240, 240, 240, 100);
 
 .nav-item a{
     color: rgba(80, 82, 78, 100);
-}
-
-.nav-item a:hover{
-    color: grey;
+    &:hover{
+        color: grey;
+    }
 }
 
 .active-link{

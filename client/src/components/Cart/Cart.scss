@@ -1,0 +1,12 @@
+svg{
+    color: rgba(80, 82, 78, 100);
+    &:hover{
+        color: grey;
+        cursor: pointer;
+    }
+}
+
+img{
+    width: 30px;
+    height: 30px;
+}
