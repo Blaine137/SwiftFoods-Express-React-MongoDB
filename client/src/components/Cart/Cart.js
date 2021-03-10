@@ -8,6 +8,8 @@ import './Cart.scss';
 
 const Cart = ({formValues, addToCart, removeFromCart}) => {
 
+    const [total, setTotal] = useState(0);
+
     return(
         <>
             <div className="container w-75 pl-0 pr-0">
@@ -19,15 +21,15 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                         </div>
                 </div>
             
-                <div className="row align-items-center mb-4">
-                    <div className="col-3 d-flex justify-content-center">
+                <div className="row align-items-center mb-4 mt-4">
+                    <div className="col-3 d-flex justify-content-end">
                         <FontAwesomeIcon 
                             icon={faMinus}  
                             size="2x"
                             onClick={() => removeFromCart("pizza", 1)}
                         /> 
                     </div>
-                    <div className="col-3 d-flex justify-content-center">
+                    <div className="col-3 d-flex justify-content-end">
                         <Media 
                             object 
                             src={process.env.PUBLIC_URL + '/assets/images/peppizza.jpg'} 
@@ -48,14 +50,14 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                 </div>
 
                 <div className="row align-items-center mb-4">
-                    <div className="col-3 d-flex justify-content-center">
+                    <div className="col-3 d-flex justify-content-end">
                         <FontAwesomeIcon 
                             icon={faMinus}  
                             size="2x"
                             onClick={() => removeFromCart("salad", 1)}
                         /> 
                     </div>
-                    <div className="col-3 d-flex justify-content-center">
+                    <div className="col-3 d-flex justify-content-end">
                         <Media 
                             object 
                             src={process.env.PUBLIC_URL + '/assets/images/salad.jpg'} 
@@ -76,14 +78,14 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                 </div>
 
                 <div className="row align-items-center mb-4">
-                    <div className="col-3 d-flex justify-content-center">
+                    <div className="col-3 d-flex justify-content-end">
                         <FontAwesomeIcon 
                             icon={faMinus}  
                             size="2x"
                             onClick={() => removeFromCart("burger", 1)}
                         /> 
                     </div>
-                    <div className="col-3 d-flex justify-content-center">
+                    <div className="col-3 d-flex justify-content-end">
                         <Media 
                             object 
                             src={process.env.PUBLIC_URL + '/assets/images/burger.jpg'} 
@@ -102,10 +104,16 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                         />
                     </div>
                 </div>
+
+                <div className="row align-items-center mt-2 mb-2">
+                    <div className="col-9">
+                        <p className="h5 text-right">Total: {total}</p>
+                    </div>
+                </div>
            
                 <div className="row align-items-center">
                     <div className="col-12 d-flex justify-content-center">
-                        <Link to="/checkout" className="w-25">
+                        <Link to="/checkout" className="w-50 mx-auto text-center">
                             <Button className="checkoutBtn">
                                 Checkout
                             </Button>

@@ -170,10 +170,6 @@ class Layout extends Component{
                             <Contact/>
                         </Route>
 
-                        <Route path="/order">
-                            <Order formValues={this.state.formValues} HandleBlur={this.addToCart} />
-                        </Route>
-
                         <Route path="/checkout">
                             <Order formValues={this.state.formValues} HandleBlur={this.addToCart} />
                         </Route>

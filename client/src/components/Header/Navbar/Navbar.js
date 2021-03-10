@@ -27,9 +27,6 @@ const Navigation = (props) => {
               <NavLink exact to="/" activeClassName="active-link">Home</NavLink>
             </NavItem>
             <NavItem className="mr-3 mt-2 mb-2 my-md-auto">
-              <NavLink to="/order" activeClassName="active-link">Order</NavLink>
-            </NavItem>
-            <NavItem className="mr-3 mt-2 mb-2 my-md-auto">
                 <NavLink to="/contact" activeClassName="active-link">Contact</NavLink>
             </NavItem>
             <NavItem className="mr-3 mt-2 mb-2 my-md-auto">
