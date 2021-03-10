@@ -8,7 +8,21 @@ import './Cart.scss';
 
 const Cart = ({formValues, addToCart, removeFromCart}) => {
 
-    const [total, setTotal] = useState(0);
+    const [total, setTotal] = useState(0.00);
+
+    let updateTotal = (pizzas) => {
+        if(pizzas > 0){
+            let newPizzaPrice = formValues.pizzas * 6.99;
+            let afterTaxPrice = newPizzaPrice * parseFloat(0.7);
+            let newTotal = parseFloat(total + afterTaxPrice);
+            setTotal((newPizzaPrice * 1.07).toFixed(2) * 100);
+        }else if(pizzas == 0){
+            let newPizzaPrice = formValues.pizzas + parseFloat(6.99);
+            let afterTaxPrice = newPizzaPrice * parseFloat(0.7);
+            let newTotal = parseFloat(total + afterTaxPrice);
+            setTotal(newTotal)
+        }
+    };
 
     return(
         <>
@@ -44,7 +58,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                         <FontAwesomeIcon 
                             icon={faPlus}  
                             size="2x"
-                            onClick={() => addToCart("pizza", 1)}
+                            onClick={() => {addToCart("pizza", 1); updateTotal(formValues.pizzas)}}
                         />
                     </div>
                 </div>
@@ -66,7 +80,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                         />
                     </div>
                     <div className="col-3 d-flex justify-content-start">
-                        {formValues.pizzas} 
+                        {formValues.salads} 
                     </div>
                     <div className="col-3 d-flex justify-content-start">
                         <FontAwesomeIcon 
@@ -94,7 +108,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                         />
                     </div>
                     <div className="col-3 d-flex justify-content-start">
-                        {formValues.pizzas} 
+                        {formValues.burgers} 
                     </div>
                     <div className="col-3 d-flex justify-content-start">
                         <FontAwesomeIcon 
@@ -107,7 +121,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
 
                 <div className="row align-items-center mt-2 mb-2">
                     <div className="col-9">
-                        <p className="h5 text-right">Total: {total}</p>
+                        <p className="h5 text-right">Total: {total.toFixed(2)}</p>
                     </div>
                 </div>
            
