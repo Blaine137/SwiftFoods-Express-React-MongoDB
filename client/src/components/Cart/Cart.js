@@ -10,17 +10,19 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
 
     const [total, setTotal] = useState(0.00);
 
-    let updateTotal = (pizzas) => {
-        if(pizzas > 0){
+    let updateTotal = (items) => {
+        if(items > 0){
+            console.log('clicked')
             let newPizzaPrice = formValues.pizzas * 6.99;
             let afterTaxPrice = newPizzaPrice * parseFloat(0.7);
             let newTotal = parseFloat(total + afterTaxPrice);
-            setTotal((newPizzaPrice * 1.07).toFixed(2) * 100);
-        }else if(pizzas == 0){
+            setTotal((newPizzaPrice * 1.07).toFixed(2));
+        }else if(items >= 0){
+            console.log('clicked')
             let newPizzaPrice = formValues.pizzas + parseFloat(6.99);
             let afterTaxPrice = newPizzaPrice * parseFloat(0.7);
             let newTotal = parseFloat(total + afterTaxPrice);
-            setTotal(newTotal)
+            setTotal((newPizzaPrice * 1.07).toFixed(2));
         }
     };
 
@@ -121,7 +123,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
 
                 <div className="row align-items-center mt-2 mb-2">
                     <div className="col-9">
-                        <p className="h5 text-right">Total: {total.toFixed(2)}</p>
+                        <p className="h5 text-right">Total: {total}</p>
                     </div>
                 </div>
            
