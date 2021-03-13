@@ -11,19 +11,14 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
     const [total, setTotal] = useState(0.00);
 
     let updateTotal = (items) => {
-        console.log(formValues)
-        if(items > 0){
+        if(items > 0 || items === 0){
             let newPizzaPrice = formValues.pizzas * 6.99;
             let newSaladPrice = formValues.salads * 4.99;
             let newBurgerPrice = formValues.burgers * 8.99;
             let newTotal = newPizzaPrice + newSaladPrice + newBurgerPrice;
             setTotal((newTotal * 1.07).toFixed(2));
-        }else if(items == 0){
-            let newPizzaPrice = formValues.pizzas * 6.99;
-            let newSaladPrice = formValues.salads * 4.99;
-            let newBurgerPrice = formValues.burgers * 8.99;
-            let newTotal = newPizzaPrice + newSaladPrice + newBurgerPrice;
-            setTotal((newTotal * 1.07).toFixed(2));
+        }else if(items < 0){
+            setTotal(0)
         }
     };
 

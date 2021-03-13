@@ -80,29 +80,59 @@ class Layout extends Component{
     removeFromCart = (food, number) => {
         
 		if(food === "pizza"){
-            this.setState((prevState) => ({
-                ...prevState,
-                formValues: {
-                    ...prevState.formValues,
-                    pizzas: prevState.formValues.pizzas - number
-                }
-            }));
+            if(this.state.formValues.pizzas <= 0){
+                this.setState((prevState) => ({
+                    ...prevState,
+                    formValues: {
+                        ...prevState.formValues,
+                        pizzas: 0
+                    }
+                }));
+            }else{
+                this.setState((prevState) => ({
+                    ...prevState,
+                    formValues: {
+                        ...prevState.formValues,
+                        pizzas: prevState.formValues.pizzas - number
+                    }
+                }));
+            }
         } else if(food === "salad"){
-            this.setState((prevState) => ({
-                ...prevState,
-                formValues: {
-                    ...prevState.formValues,
-                    salads: prevState.formValues.salads - number
-                }
-            }));
+            if(this.state.formValues.salads <= 0){
+                this.setState((prevState) => ({
+                    ...prevState,
+                    formValues: {
+                        ...prevState.formValues,
+                        salads: 0
+                    }
+                }));
+            }else{
+                this.setState((prevState) => ({
+                    ...prevState,
+                    formValues: {
+                        ...prevState.formValues,
+                        salads: prevState.formValues.salads - number
+                    }
+                }));
+            }
         } else if(food === "burger"){
-            this.setState((prevState) => ({
-                ...prevState,
-                formValues: {
-                    ...prevState.formValues,
-                    burgers: prevState.formValues.burgers - number
-                }
-            }));
+            if(this.state.formValues.burgers <= 0){
+                this.setState((prevState) => ({
+                    ...prevState,
+                    formValues: {
+                        ...prevState.formValues,
+                        burgers: 0
+                    }
+                }));
+            }else{
+                this.setState((prevState) => ({
+                    ...prevState,
+                    formValues: {
+                        ...prevState.formValues,
+                        burgers: prevState.formValues.burgers - number
+                    }
+                }));
+            }
         }
 	}
 
