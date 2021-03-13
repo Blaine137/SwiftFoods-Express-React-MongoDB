@@ -45,14 +45,14 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                 </div>
             
                 <div className="row align-items-center mb-4 mt-4">
-                    <div className="col-3 d-flex justify-content-end">
+                    <div className="col-3 d-flex justify-content-end p-0">
                         <FontAwesomeIcon 
                             icon={faMinus}  
                             size="2x"
                             onClick={() => removeFromCart("pizza", 1)}
                         /> 
                     </div>
-                    <div className="col-3 d-flex justify-content-end">
+                    <div className="col-3 d-flex justify-content-end p-0">
                         <Media 
                             object 
                             src={process.env.PUBLIC_URL + '/assets/images/peppizza.jpg'} 
@@ -63,7 +63,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                     <div className="col-3 d-flex justify-content-start">
                         {formValues.pizzas} 
                     </div>
-                    <div className="col-3 d-flex justify-content-start">
+                    <div className="col-3 d-flex justify-content-start p-0">
                         <FontAwesomeIcon 
                             icon={faPlus}  
                             size="2x"
@@ -73,14 +73,14 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                 </div>
 
                 <div className="row align-items-center mb-4">
-                    <div className="col-3 d-flex justify-content-end">
+                    <div className="col-3 d-flex justify-content-end p-0">
                         <FontAwesomeIcon 
                             icon={faMinus}  
                             size="2x"
                             onClick={() => removeFromCart("salad", 1)}
                         /> 
                     </div>
-                    <div className="col-3 d-flex justify-content-end">
+                    <div className="col-3 d-flex justify-content-end p-0">
                         <Media 
                             object 
                             src={process.env.PUBLIC_URL + '/assets/images/salad.jpg'} 
@@ -91,7 +91,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                     <div className="col-3 d-flex justify-content-start">
                         {formValues.salads} 
                     </div>
-                    <div className="col-3 d-flex justify-content-start">
+                    <div className="col-3 d-flex justify-content-start p-0">
                         <FontAwesomeIcon 
                             icon={faPlus}  
                             size="2x"
@@ -101,14 +101,14 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                 </div>
 
                 <div className="row align-items-center mb-4">
-                    <div className="col-3 d-flex justify-content-end">
+                    <div className="col-3 d-flex justify-content-end p-0">
                         <FontAwesomeIcon 
                             icon={faMinus}  
                             size="2x"
                             onClick={() => removeFromCart("burger", 1)}
                         /> 
                     </div>
-                    <div className="col-3 d-flex justify-content-end">
+                    <div className="col-3 d-flex justify-content-end p-0">
                         <Media 
                             object 
                             src={process.env.PUBLIC_URL + '/assets/images/burger.jpg'} 
@@ -119,7 +119,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                     <div className="col-3 d-flex justify-content-start">
                         {formValues.burgers} 
                     </div>
-                    <div className="col-3 d-flex justify-content-start">
+                    <div className="col-3 d-flex justify-content-start p-0">
                         <FontAwesomeIcon 
                             icon={faPlus}  
                             size="2x"
