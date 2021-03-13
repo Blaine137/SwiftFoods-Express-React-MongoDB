@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import {Media, Button} from 'reactstrap';
@@ -11,17 +11,27 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
     const [total, setTotal] = useState(0.00);
 
     let updateTotal = (items) => {
-        console.log(formValues.pizzas)
+        console.log(formValues)
         if(items > 0){
-            console.log('clicked')
             let newPizzaPrice = formValues.pizzas * 6.99;
-            setTotal((newPizzaPrice * 1.07).toFixed(2));
+            let newSaladPrice = formValues.salads * 4.99;
+            let newBurgerPrice = formValues.burgers * 8.99;
+            let newTotal = newPizzaPrice + newSaladPrice + newBurgerPrice;
+            setTotal((newTotal * 1.07).toFixed(2));
         }else if(items == 0){
-            console.log('clicked')
-            let newPizzaPrice = 6.99;
-            setTotal((newPizzaPrice * 1.07).toFixed(2));
+            let newPizzaPrice = formValues.pizzas * 6.99;
+            let newSaladPrice = formValues.salads * 4.99;
+            let newBurgerPrice = formValues.burgers * 8.99;
+            let newTotal = newPizzaPrice + newSaladPrice + newBurgerPrice;
+            setTotal((newTotal * 1.07).toFixed(2));
         }
     };
+
+    useEffect(() => {
+        updateTotal(formValues.pizzas)
+        updateTotal(formValues.salads)
+        updateTotal(formValues.burgers)
+    }, [formValues]);
 
     return(
         <>
@@ -57,7 +67,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                         <FontAwesomeIcon 
                             icon={faPlus}  
                             size="2x"
-                            onClick={() => {addToCart("pizza", 1); updateTotal(formValues.pizzas)}}
+                            onClick={() => addToCart("pizza", 1) }
                         />
                     </div>
                 </div>
