@@ -1,25 +1,21 @@
-p{
-    font-family: 'Montserrat', sans-serif;
+svg{
+    color: rgba(80, 82, 78, 100);
+    &:hover{
+        color: grey;
+        cursor: pointer;
+    }
 }
 
-
-.card-title{
-    color: #574AE2;
-    font-family: 'Montserrat', sans-serif;
+.cartImg{
+    width: 40px;
+    height: 40px;
 }
 
-.shopCard{
-    width: 16rem;
-    background-image: linear-gradient(white, rgba(241, 255, 244, 100));
-}
-
-.orderBtn{
+.checkoutBtn{
     background-color: rgba(65, 127, 86, 100) !important;
     color: white !important;
     transition: transform .5s ease-in-out;
     font-family: 'Montserrat', sans-serif;
-    position: absolute;
-    left: 28%;
     border-radius: 15px !important;
     &:focus, &:hover{
         box-shadow: none !important;

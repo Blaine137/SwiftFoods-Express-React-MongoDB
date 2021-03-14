@@ -28,7 +28,6 @@ paymentRouter.route('/')
 .post(async (req, res) => {
 
     const { items } = req.body;
-    console.log(items)
 
     // Create a PaymentIntent with the order amount and currency
   

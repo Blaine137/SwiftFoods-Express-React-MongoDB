@@ -3,7 +3,6 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle, Button, Spinner
   } from 'reactstrap';
-import {Link} from 'react-router-dom';
 import Zoom from 'react-reveal/Zoom';
 import './Shop.scss';
 
@@ -28,11 +27,10 @@ const Shop = (props) => {
                                 <CardText>
                                     {props.data ? props.data.pizza.price.$numberDecimal : <Spinner color="#574AE2"/>}
                                 </CardText>
-                                <Link to="/order">
-                                    <Button className="orderBtn">
-                                        Order Now
-                                    </Button>
-                                </Link>
+                                <Button className="orderBtn"
+                                        onClick={() => props.addToCart("pizza", 1)}>
+                                    Add to cart
+                                </Button>
                             </CardBody>
                         </Card>
                     </Zoom>
@@ -51,11 +49,10 @@ const Shop = (props) => {
                                 <CardText >
                                     {props.data ? props.data.salad.price.$numberDecimal : <Spinner color="#574AE2"/>}
                                 </CardText>
-                                <Link to="/order">
-                                    <Button className="orderBtn">
-                                        Order Now
-                                    </Button>
-                                </Link>
+                                <Button className="orderBtn"
+                                        onClick={() => props.addToCart("salad", 1)}>
+                                    Add to cart
+                                </Button>
                             </CardBody>
                         </Card>
                     </Zoom>
@@ -74,11 +71,10 @@ const Shop = (props) => {
                                 <CardText >
                                     {props.data ? props.data.burger.price.$numberDecimal : <Spinner color="#574AE2"/>}
                                 </CardText>
-                                <Link to="/order">
-                                    <Button className="orderBtn">
-                                        Order Now
-                                    </Button>
-                                </Link>
+                                <Button className="orderBtn"
+                                        onClick={() => props.addToCart("burger", 1)}>
+                                    Add to cart
+                                </Button>
                             </CardBody>
                         </Card>
                     </Zoom>

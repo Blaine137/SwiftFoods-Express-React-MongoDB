@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import {NavLink, Link} from 'react-router-dom';
 
 const footer = (props) => {
@@ -15,10 +15,10 @@ const footer = (props) => {
                             <h4 className="footerH4">Links</h4>
                             <ul className="list-unstyled">
                                 <li>
-                                    <NavLink exact to="/" activeClassName="active-footer-link">Home</NavLink>
+                                    <NavLink to="/cart" activeClassName="active-footer-link"><FontAwesomeIcon icon={faShoppingCart} size="lg"/></NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/order" activeClassName="active-footer-link">Order</NavLink>
+                                    <NavLink exact to="/" activeClassName="active-footer-link">Home</NavLink>
                                 </li>
                                 <li>
                                     <NavLink exact to="/contact" activeClassName="active-footer-link">Contact</NavLink>

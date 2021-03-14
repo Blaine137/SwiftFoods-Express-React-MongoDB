@@ -5,6 +5,7 @@ import Contact from '../Contact/Contact';
 import SubscribeForm from '../SubscribeForm/SubscribeForm';
 import Footer from '../Footer/Footer';
 import Order from '../Order/Order';
+import Cart from '../Cart/Cart';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import {
   Modal, 
@@ -28,7 +29,12 @@ class Layout extends Component{
         showModal: false,
         username: null,
         password: null,
-        loggedIn: false
+        loggedIn: false,
+        formValues: {
+            pizzas: 0,
+            salads: 0,
+            burgers: 0
+        }
     };
 
     componentDidMount(){
@@ -41,6 +47,94 @@ class Layout extends Component{
         return body;
         
     }
+ 
+	addToCart = (food, number) => {
+        
+		if(food === "pizza"){
+            this.setState((prevState, props) => ({
+                ...prevState,
+                formValues: {
+                    ...prevState.formValues,
+                    pizzas: prevState.formValues.pizzas + number
+                }
+            }));
+        } else if(food === "salad"){
+            this.setState((prevState, props) => ({
+                ...prevState,
+                formValues: {
+                    ...prevState.formValues,
+                    salads: prevState.formValues.salads + number
+                }
+            }));
+        } else if(food === "burger"){
+            this.setState((prevState, props) => ({
+                ...prevState,
+                formValues: {
+                    ...prevState.formValues,
+                    burgers: prevState.formValues.burgers + number
+                }
+            }));
+        }
+	}
+
+    removeFromCart = (food, number) => {
+        
+		if(food === "pizza"){
+            if(this.state.formValues.pizzas <= 0){
+                this.setState((prevState) => ({
+                    ...prevState,
+                    formValues: {
+                        ...prevState.formValues,
+                        pizzas: 0
+                    }
+                }));
+            }else{
+                this.setState((prevState) => ({
+                    ...prevState,
+                    formValues: {
+                        ...prevState.formValues,
+                        pizzas: prevState.formValues.pizzas - number
+                    }
+                }));
+            }
+        } else if(food === "salad"){
+            if(this.state.formValues.salads <= 0){
+                this.setState((prevState) => ({
+                    ...prevState,
+                    formValues: {
+                        ...prevState.formValues,
+                        salads: 0
+                    }
+                }));
+            }else{
+                this.setState((prevState) => ({
+                    ...prevState,
+                    formValues: {
+                        ...prevState.formValues,
+                        salads: prevState.formValues.salads - number
+                    }
+                }));
+            }
+        } else if(food === "burger"){
+            if(this.state.formValues.burgers <= 0){
+                this.setState((prevState) => ({
+                    ...prevState,
+                    formValues: {
+                        ...prevState.formValues,
+                        burgers: 0
+                    }
+                }));
+            }else{
+                this.setState((prevState) => ({
+                    ...prevState,
+                    formValues: {
+                        ...prevState.formValues,
+                        burgers: prevState.formValues.burgers - number
+                    }
+                }));
+            }
+        }
+	}
 
     toggleModal = () => {
         this.setState({showModal: !this.state.showModal})
@@ -91,31 +185,27 @@ class Layout extends Component{
     }
 
     render(){
-
         
         return(
 
             <Fragment>
                 <Header toggleModal={this.toggleModal} logout={this.logoutUser} toggleLogin={this.toggleLogin} loginUser={this.loginUser} loggedIn={this.state.loggedIn}/>
-                
-            
-                
                     <Switch>
                     
                         <Route exact path="/">
-                            <Home data={this.state.Data}/>
+                            <Home data={this.state.Data} addToCart={this.addToCart}/>
                         </Route>
 
                         <Route path="/contact">
                             <Contact/>
                         </Route>
 
-                        <Route path="/order">
-                            <Order/>
+                        <Route path="/checkout">
+                            <Order formValues={this.state.formValues} HandleBlur={this.addToCart} />
                         </Route>
 
-                        <Route path="/checkout">
-                            <Order/>
+                        <Route path="/cart">
+                            <Cart formValues={this.state.formValues} addToCart={this.addToCart} removeFromCart={this.removeFromCart}/>
                         </Route>
 
                         <Route path="/subscribe">
