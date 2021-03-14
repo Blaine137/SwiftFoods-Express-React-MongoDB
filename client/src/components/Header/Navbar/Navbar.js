@@ -19,18 +19,18 @@ const Navigation = (props) => {
 
   return (
     <div>
-      <Navbar light expand="md" className="navbar w-75 ml-auto mr-auto pl-0 pr-0" sticky="top">
+      <Navbar light expand="md" className="navbar w-75 ml-auto mr-auto pl-0 pr-0">
         <NavbarToggler onClick={toggle} className="ml-auto" />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem className="mr-3 mb-2 my-md-auto">
-              <NavLink exact to="/" activeClassName="active-link">Home</NavLink>
+              <NavLink exact to="/" activeClassName="active-link" onClick={toggle}>Home</NavLink>
             </NavItem>
             <NavItem className="mr-3 mt-2 mb-2 my-md-auto">
-                <NavLink to="/contact" activeClassName="active-link">Contact</NavLink>
+                <NavLink to="/contact" activeClassName="active-link" onClick={toggle}>Contact</NavLink>
             </NavItem>
             <NavItem className="mr-3 mt-2 mb-2 my-md-auto">
-              <NavLink to="/cart">
+              <NavLink to="/cart" onClick={toggle}>
                 <FontAwesomeIcon icon={faShoppingCart} size="lg"/>
               </NavLink>
             </NavItem>
@@ -46,6 +46,7 @@ const Navigation = (props) => {
                 // props.loginUser();
                 props.toggleModal();
               }
+              
             }}>
               {props.loggedIn ? "Logout" : "Login"}
             </Button>
