@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import {Media, Button} from 'reactstrap';
 import {Link} from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
 import './Cart.scss';
 
 
@@ -38,6 +39,9 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                             </p>
                         </div>
                 </div>
+            </div>
+            <Fade top>
+            <div className="container w-75 pl-0 pr-0">
             
                 <div className="row align-items-center mb-4 mt-4">
                     <div className="col-3 d-flex justify-content-end p-0">
@@ -139,6 +143,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                     </div>
                 </div>
             </div>
+            </Fade>
         </>
     );
 
