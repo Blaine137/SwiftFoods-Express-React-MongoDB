@@ -127,7 +127,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                     </div>
                 </div>
 
-                <div className="row align-items-center mt-2 mb-2">
+                <div className="row align-items-center mt-4 mb-4">
                     <div className="col-9">
                         <p className="h5 text-right">Total: {total}</p>
                     </div>
@@ -136,7 +136,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                 <div className="row align-items-center">
                     <div className="col-12 d-flex justify-content-center">
                         <Link to="/checkout" className="w-50 mx-auto text-center">
-                            <Button className="checkoutBtn">
+                            <Button className="w-50 checkoutBtn">
                                 Checkout
                             </Button>
                         </Link>
