@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import {Button, Label, Col, Row, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
-import Roll from 'react-reveal/Roll';
+import Zoom from 'react-reveal/Zoom';
 import './Contact.scss';
 
 
@@ -36,7 +36,7 @@ const Contact = (props) => {
             </div>
             <div className="container w-75">
                 <div className="row">
-                    <Roll left>
+                    <Zoom>
                         <LocalForm className="mx-auto mb-5 p-4 col-10" onSubmit={handleSubmit} >
                             <Row className="form-group">
                                 <Col  lg={6}>
@@ -164,7 +164,7 @@ const Contact = (props) => {
                                 <Button className="btn mx-auto submitBtn w-50" onClick={() => toggleModal(!showModal)}>Submit</Button>
                             </Row>
                         </LocalForm>
-                    </Roll>
+                    </Zoom>
                     <Modal isOpen={showModal} toggle={toggleModal}>
                         <ModalHeader>Thank You For Contacting Us!</ModalHeader>
                         <ModalBody>An member from Swift Foods will review your submittion shortly, expect a response within the next 72 hours. </ModalBody>

@@ -34,7 +34,7 @@ const Navigation = (props) => {
                 <FontAwesomeIcon icon={faShoppingCart} size="lg"/>
               </NavLink>
             </NavItem>
-            <Button className="btn-secondary loginBtn h-60 w-25 w-md-auto" 
+            <Button className="btn-secondary loginBtn h-60 w-25 w-md-auto text-center pr-md-4" 
             onClick={() => {
               props.loggedIn ? props.toggleLogin() : props.toggleModal()
 
