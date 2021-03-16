@@ -111,7 +111,12 @@ class Layout extends Component{
                         ...prevState.formValues,
                         pizzas: prevState.formValues.pizzas - number
                     }
-                }));
+                }), () => {
+                    this.setState((prevState, props) => ({
+                        ...prevState,
+                        cartItems: prevState.cartItems - number
+                    }))
+                });
             }
         } else if(food === "salad"){
             if(this.state.formValues.salads <= 0){
@@ -129,7 +134,12 @@ class Layout extends Component{
                         ...prevState.formValues,
                         salads: prevState.formValues.salads - number
                     }
-                }));
+                }), () => {
+                    this.setState((prevState, props) => ({
+                        ...prevState,
+                        cartItems: prevState.cartItems - number
+                    }))
+                });
             }
         } else if(food === "burger"){
             if(this.state.formValues.burgers <= 0){
@@ -147,7 +157,12 @@ class Layout extends Component{
                         ...prevState.formValues,
                         burgers: prevState.formValues.burgers - number
                     }
-                }));
+                }), () => {
+                    this.setState((prevState, props) => ({
+                        ...prevState,
+                        cartItems: prevState.cartItems - number
+                    }))
+                });
             }
         }
 	}
