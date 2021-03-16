@@ -9,7 +9,14 @@ const header = (props) => {
     return(
 
         <Fragment>
-            <Navigation toggleModal={props.toggleModal} logout={props.logout} loginUser={props.loginUser} toggleLogin={props.toggleLogin} loggedIn={props.loggedIn}/>
+            <Navigation 
+                toggleModal={props.toggleModal} 
+                logout={props.logout} 
+                loginUser={props.loginUser} 
+                toggleLogin={props.toggleLogin} 
+                loggedIn={props.loggedIn}
+                cartItems={props.cartItems}
+            />
             <header className="jumbotron ml-auto mr-auto mb-4 mt-2 w-75">
                 <div className="container">
                     <div className="row align-items-center">

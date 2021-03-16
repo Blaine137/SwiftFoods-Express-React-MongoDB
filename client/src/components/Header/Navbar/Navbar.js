@@ -31,7 +31,8 @@ const Navigation = (props) => {
             </NavItem>
             <NavItem className="mr-3 mt-2 mb-2 my-md-auto">
               <NavLink to="/cart" onClick={toggle}>
-                <FontAwesomeIcon icon={faShoppingCart} size="lg"/>
+                <FontAwesomeIcon icon={faShoppingCart} size="lg" className="mr-2"/>
+                {props.cartItems}
               </NavLink>
             </NavItem>
             <Button className="btn-secondary loginBtn h-60 w-25 w-md-auto text-center pr-md-4" 
