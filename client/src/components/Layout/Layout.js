@@ -34,7 +34,8 @@ class Layout extends Component{
             pizzas: 0,
             salads: 0,
             burgers: 0
-        }
+        },
+        cartItems: 0
     };
 
     componentDidMount(){
@@ -57,7 +58,12 @@ class Layout extends Component{
                     ...prevState.formValues,
                     pizzas: prevState.formValues.pizzas + number
                 }
-            }));
+            }), () => {
+                this.setState((prevState, props) => ({
+                    ...prevState,
+                    cartItems: number + prevState.cartItems
+                }))
+            });
         } else if(food === "salad"){
             this.setState((prevState, props) => ({
                 ...prevState,
@@ -65,7 +71,12 @@ class Layout extends Component{
                     ...prevState.formValues,
                     salads: prevState.formValues.salads + number
                 }
-            }));
+            }), () => {
+                this.setState((prevState, props) => ({
+                    ...prevState,
+                    cartItems: number + prevState.cartItems
+                }))
+            });
         } else if(food === "burger"){
             this.setState((prevState, props) => ({
                 ...prevState,
@@ -73,7 +84,12 @@ class Layout extends Component{
                     ...prevState.formValues,
                     burgers: prevState.formValues.burgers + number
                 }
-            }));
+            }), () => {
+                this.setState((prevState, props) => ({
+                    ...prevState,
+                    cartItems: number + prevState.cartItems
+                }))
+            });
         }
 	}
 
@@ -189,7 +205,14 @@ class Layout extends Component{
         return(
 
             <Fragment>
-                <Header toggleModal={this.toggleModal} logout={this.logoutUser} toggleLogin={this.toggleLogin} loginUser={this.loginUser} loggedIn={this.state.loggedIn}/>
+                <Header 
+                    toggleModal={this.toggleModal} 
+                    logout={this.logoutUser} 
+                    toggleLogin={this.toggleLogin} 
+                    loginUser={this.loginUser} 
+                    loggedIn={this.state.loggedIn}
+                    cartItems={this.state.cartItems}
+                />
                     <Switch>
                     
                         <Route exact path="/">
