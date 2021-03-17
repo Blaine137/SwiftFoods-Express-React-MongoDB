@@ -26,7 +26,7 @@ const header = (props) => {
                             <Link className="btn btn-large btn-primary mt-2 subscribe mb-2" data-toggle="#" data-target="#" to="/subscribe">Subscribe</Link>
                         </div>
                         <div className="col-xs-12 col-md-5 text-center align-self-center">
-                            <img class="img-fluid" src={process.env.PUBLIC_URL + '/assets/images/foodtruck.png'} alt="food truck"/>
+                            <img class="img-fluid" src={process.env.PUBLIC_URL + '/assets/images/foodtruck.webp'} alt="food truck"/>
                         </div>
                     </div>
                 </div>

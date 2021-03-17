@@ -25,7 +25,7 @@ const About = (props) => {
                             </div>
                             <div class="col-12 col-md-6 text-lg-right text-xs-center ">
                                 <Slide bottom>
-                                    <img className="img-fluid" src={process.env.PUBLIC_URL + '/assets/images/fooddata.png'} alt="food truck"/>
+                                    <img className="img-fluid" src={process.env.PUBLIC_URL + '/assets/images/fooddata.webp'} alt="food truck"/>
                                 </Slide>
                             </div>
                         </div>

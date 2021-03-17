@@ -16,7 +16,7 @@ const Shop = (props) => {
                 <div className="col-12 col-md-6 col-lg-4">
                     <Zoom left>
                         <Card className="mx-auto mb-4 shopCard border-0">
-                            <CardImg className="rounded-circle" top width="100%" src={process.env.PUBLIC_URL + '/assets/images/peppizza.jpg'} alt="pepperoni pizza" />
+                            <CardImg className="rounded-circle" top width="100%" src={process.env.PUBLIC_URL + '/assets/images/peppizza.webp'} alt="pepperoni pizza" />
                             <CardBody className="text-center">
                                 <CardTitle tag="h5">
                                     {props.data ? props.data.pizza.title : <Spinner color="#574AE2"/>}
@@ -38,7 +38,7 @@ const Shop = (props) => {
                 <div className="col-12 col-md-6 col-lg-4">
                     <Zoom clear>
                         <Card className="mx-auto shopCard mb-4 border-0 mt-4 mt-md-0">
-                            <CardImg className="rounded-circle" top width="100%" src={process.env.PUBLIC_URL + '/assets/images/salad.jpg'} alt="salad" />
+                            <CardImg className="rounded-circle" top width="100%" src={process.env.PUBLIC_URL + '/assets/images/salad.webp'} alt="salad" />
                             <CardBody className="text-center">
                                 <CardTitle tag="h5">
                                     {props.data ? props.data.salad.title : <Spinner color="#574AE2"/>}
@@ -60,7 +60,7 @@ const Shop = (props) => {
                 <div className="col-12 col-md-6-offset-2 col-lg-4">
                     <Zoom right>
                         <Card className="mx-auto shopCard mb-4 border-0 mt-4 mt-md-0">
-                            <CardImg className="rounded-circle" top width="100%" src={process.env.PUBLIC_URL + '/assets/images/burger.jpg'} alt="burger" />
+                            <CardImg className="rounded-circle" top width="100%" src={process.env.PUBLIC_URL + '/assets/images/burger.webp'} alt="burger" />
                             <CardBody className="text-center">
                                 <CardTitle tag="h5">
                                     {props.data ? props.data.burger.title : <Spinner color="#574AE2"/>}
