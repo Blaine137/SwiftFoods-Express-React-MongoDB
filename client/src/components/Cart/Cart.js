@@ -54,7 +54,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                     <div className="col-3 d-flex justify-content-end p-0">
                         <Media 
                             object 
-                            src={process.env.PUBLIC_URL + '/assets/images/peppizza.jpg'} 
+                            src={process.env.PUBLIC_URL + '/assets/images/peppizza.webp'} 
                             alt="pizza img" 
                             className="d-inline rounded-circle cartImg" 
                         />
@@ -82,7 +82,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                     <div className="col-3 d-flex justify-content-end p-0">
                         <Media 
                             object 
-                            src={process.env.PUBLIC_URL + '/assets/images/salad.jpg'} 
+                            src={process.env.PUBLIC_URL + '/assets/images/salad.webp'} 
                             alt="pizza img" 
                             className="d-inline rounded-circle cartImg" 
                         />
@@ -110,7 +110,7 @@ const Cart = ({formValues, addToCart, removeFromCart}) => {
                     <div className="col-3 d-flex justify-content-end p-0">
                         <Media 
                             object 
-                            src={process.env.PUBLIC_URL + '/assets/images/burger.jpg'} 
+                            src={process.env.PUBLIC_URL + '/assets/images/burger.webp'} 
                             alt="pizza img" 
                             className="d-inline rounded-circle cartImg" 
                         />

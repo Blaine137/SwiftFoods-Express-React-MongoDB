@@ -1,8 +1,7 @@
 const express = require("express");
 const loginRouter = express.Router();
 const passport = require("passport");
-const passportLocal = require("passport-local").Strategy;
-const Products = require('../models/products');
+
 
 loginRouter.route('/')
 .all((req, res, next) => {

@@ -8,6 +8,7 @@ import Order from '../Order/Order';
 import Cart from '../Cart/Cart';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import {
+  Container,
   Modal, 
   ModalBody, 
   ModalFooter, 
@@ -20,6 +21,7 @@ import {
   Label
 } from 'reactstrap';
 import Axios from 'axios';
+
 
 
 class Layout extends Component{
@@ -185,11 +187,28 @@ class Layout extends Component{
             withCredentials: true,
             url: "/login",
           }).then((res) => {
-            console.log(res.data)
+           
             if(res.data !== "No User Exists"){
                 this.toggleLogin();
             }
           });
+
+          if(this.state.username === null && this.state.password ===  null){
+            Axios({
+                method: "POST",
+                data: {
+                  username: 'guest',
+                  password: 'test',
+                },
+                withCredentials: true,
+                url: "/login",
+              }).then((res) => {
+                console.log(res.data)
+                if(res.data !== "No User Exists"){
+                    this.toggleLogin();
+                }
+              });
+          }
     }
 
     logoutUser = () => {
@@ -282,11 +301,17 @@ class Layout extends Component{
                             <Button onClick={() => {
                                 this.toggleModal();
                                 this.loginUser();
-                            }} className="submitBtn">Login</Button>
+                            }} className="submitBtn w-30">Login</Button>
                             <Button onClick={() => {
                                 this.toggleModal();
                                 this.registerUser();
-                            }} className="submitBtn">Register</Button>
+                            }} className="submitBtn w-30">Register</Button>
+                           
+                            <Button className="submitBtn h-60 w-30 w-md-auto text-center"
+                                onClick={() => {this.loginUser(); this.toggleModal()}}>
+                                 Guest login
+                            </Button>
+                            
                         </ModalFooter>
                     </Modal>
                 <Footer/>

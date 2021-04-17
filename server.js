@@ -64,6 +64,7 @@ app.get('/logout', async(req, res) => {
     
   }
 }) //logout route
+app.use('/guest', loginRouter)
 app.use('/register', registerRouter)
 app.use('/payment', paymentRouter)
 
